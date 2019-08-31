@@ -26,11 +26,11 @@
                               <a class="nav-link" href="index.html">Home</a>
                            </li>
                            <li class="nav-item">
-                              <a class="nav-link" href="#">about</a>
+                              <a class="nav-link" href="#">about us</a>
                            </li>
-                           <li class="nav-item">
+                           <!-- <li class="nav-item">
                               <a class="nav-link" href="#">services</a>
-                           </li>
+                           </li> -->
                            <li class="nav-item">
                               <a class="nav-link" href="#">portfolio</a>
                            </li>

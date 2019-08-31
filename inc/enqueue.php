@@ -36,7 +36,7 @@ add_action('wp_enqueue_scripts','tg_load_scripts');
 function tg_load_admin_scripts( $hook ){
 	wp_enqueue_media();
 	wp_register_script('pf-admin-script',get_template_directory_uri().'/js/pf-admin.js',array('jquery'),microtime(), true);
-	wp_enqueue_script('tg-admin-script');
+	wp_enqueue_script('pf-admin-script');
 }
 
 add_action('admin_enqueue_scripts','tg_load_admin_scripts');
