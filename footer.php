@@ -6,23 +6,22 @@
                   <div class="single-footer-widget">
                      <h4>Our Service</h4>
                      <ul>
-                        <li><a href="#">Service 1</a></li>
-                        <li><a href="#">Service 2</a></li>
-                        <li><a href="#">Service 3</a></li>
-                        <li><a href="#">Service 4</a></li>
-                        <li><a href="#">Service 5</a></li>
-                        <li><a href="#">Service 6</a></li>
+                        <li><a href="#">Web Designing</a></li>
+                        <li><a href="#">Web Development</a></li>
+                        <li><a href="#">Web Application</a></li>
+                        <li><a href="#">Android App Development</a></li>
+                        
                      </ul>
                   </div>
                </div>
                <div class="col-sm-6 col-md-6 col-lg-3">
                   <div class="single-footer-widget footer_icon">
                      <h4>Contact Info</h4>
-                     <p>Address
+                     <p>10/G Panpara 5th lane.<br> Barrackpore. Kolkata<br>Pin - 700123
                      </p>
                      <ul>
-                        <li><a href="#"><i class="ti-mobile"></i>+91 - 99999 55555</a></li>
-                        <li><a href="#"><i class="ti-email"></i>contact@thepalefire.com</a></li>
+                        <li><a href="#"><i class="ti-mobile"></i>+91 - 89618 19473</a></li>
+                        <li><a href="#"><i class="ti-email"></i>thepalefire2019@gmail.com</a></li>
                      </ul>
                   </div>
                </div>
@@ -55,7 +54,7 @@
                <div class="col-lg-12">
                   <div class="copyright_part_text text-center">
                      <p class="footer-text m-0">
-                        Copyright &copy; 2019. All rights reserved.
+                        Copyright &copy; PALEFIRE 2019. All rights reserved.
                      </p>
                   </div>
                </div>
