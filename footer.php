@@ -17,7 +17,7 @@
                <div class="col-sm-6 col-md-6 col-lg-3">
                   <div class="single-footer-widget footer_icon">
                      <h4>Contact Info</h4>
-                     <p>10/G Panpara 5th lane.<br> Barrackpore. Kolkata<br>Pin - 700123
+                     <p>Kolkata
                      </p>
                      <ul>
                         <li><a href="#"><i class="ti-mobile"></i>+91 - 89618 19473</a></li>
