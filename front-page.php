@@ -46,7 +46,14 @@ get_header();
          </div>
       </section>
 
-
+      <?php 
+            $all_portfolios = new WP_Query(array(
+                           'post_type' => 'portfolio',
+                           'posts_per_page' => 6
+                           
+                         ));
+            if( $all_portfolios->have_posts() ){
+      ?>
       <!--PORTFOLIO-->
       <section class="gallery_part section_padding">
          <div class="container-fluid">
@@ -77,11 +84,7 @@ get_header();
 
                      <!-- loop starts here -->
                      <?php 
-                         $all_portfolios = new WP_Query(array(
-                           'post_type' => 'portfolio',
-                           'posts_per_page' => 6
-                           
-                         ));
+                         
                       ?>
 
                       <?php 
@@ -183,6 +186,7 @@ get_header();
       </section>
 
       <!-- portfolio -->
+   <?php } ?>
 
       <!--TESTIMONIALS-->
       <!-- <section class="review_part">
@@ -229,7 +233,11 @@ get_header();
 
        <!--BLOG-->
        <?php
-            if( have_posts() ){
+            $blog = new WP_Query(array(
+                           'posts_per_page' => 3
+                           
+                         ));
+            if( $blog->have_posts() ){
         ?>
       <section class="catagory_post padding_bottom">
          <div class="container">
@@ -245,10 +253,7 @@ get_header();
 
             	<!-- loop start -->
                <?php
-                  $blog = new WP_Query(array(
-                           'posts_per_page' => 3
-                           
-                         ));
+                  
                   while($blog->have_posts()){
                      $blog->the_post();
                      ?>
