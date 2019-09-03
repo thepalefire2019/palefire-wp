@@ -33,3 +33,27 @@ add_action('after_setup_theme','site_setup');
 
 
 
+//  ========================================= Widget register=============================
+
+add_action( 'widgets_init', 'pf_widgets' );
+
+function pf_widgets(){
+
+  register_sidebar(array(
+      'name'      =>'Cookie Consent',
+      'id'      =>'cookie_consent',
+      'before_widget' => '<div class="cookie-consent">',
+      'after_widget'  => '</div>',
+      //'before_title'  => '<h4>',
+      //'after_title'   => '</h4>'
+    ));
+}
+
+
+
+//  ======================================= End of Widget register========================
+
+
+
+
+

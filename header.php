@@ -20,6 +20,11 @@
   <?php wp_head(); ?>
 </head>
 <body>
+  <div class="cookie">
+            <?php if(is_active_sidebar('cookie_consent')) :?>
+            <?php dynamic_sidebar('cookie_consent'); ?>
+            <?php endif; ?>
+  </div>
 	  <!--HEADER-->
       <header class="main_menu home_menu">
          <div class="container">
