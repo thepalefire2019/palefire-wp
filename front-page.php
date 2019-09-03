@@ -4,7 +4,7 @@ get_header();
 
 
 	<!--BANNER-->
-      <section class="banner_part" style="background-image:url(<?php echo get_theme_file_uri('img/banner_bg_1.jpg'); ?>);">
+      <section class="banner_part" style="background-image:url(<?php echo get_theme_file_uri('img/banner_bg_2.jpg'); ?>);">
          <div class="container">
             <div class="row align-items-center justify-content-end">
                <div class="col-lg-5">
