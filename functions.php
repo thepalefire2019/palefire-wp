@@ -1,6 +1,7 @@
 <?php
   require get_template_directory(). '/inc/enqueue.php';
-	require get_template_directory(). '/portfolio/register.php';
+  require get_template_directory(). '/portfolio/register.php';
+	require get_template_directory(). '/services/register.php';
 
 
 
