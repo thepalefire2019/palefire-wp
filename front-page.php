@@ -49,7 +49,7 @@ get_header();
       <?php 
             $all_portfolios = new WP_Query(array(
                            'post_type' => 'portfolio',
-                           'posts_per_page' => 6
+                           'posts_per_page' => 3
                            
                          ));
             if( $all_portfolios->have_posts() ){
@@ -62,19 +62,6 @@ get_header();
                   <div class="section_tittle">
                      <p>recent project</p>
                      <h2>Check latest work</h2>
-                  </div>
-               </div>
-            </div>
-            <div class="row">
-               <div class="col-lg-8 offset-lg-2">
-                  <div class="portfolio-filter filters">
-                     <ul>
-                        <li class="active" data-filter="all">All projects</li>
-                        <li data-filter="1">websites</li>
-                        <li data-filter="2">mobile applications</li>
-                        <li data-filter="3">web applications</li>
-                        <li data-filter="4">logo design</li>
-                     </ul>
                   </div>
                </div>
             </div>
@@ -94,11 +81,10 @@ get_header();
                            $data_category = 1;
                            $get_img = get_the_post_thumbnail_url($post_id, 'pf-portrait');
                            ?>
-                           <a href="portfolio_details.html" class="img-gal width-1 filtr-item" data-category="<?php echo $data_category; ?>" style="">
+                           <a href="portfolio_details.html" class="img-gal width-1 filtr-item" data-category="<?php echo $data_category; ?>" style="background-image: url('<?php echo $get_img; ?>');">
                               <div class="single_gallery_item">
                                  <!-- <img src="<?php echo $get_img; ?>"> -->
-                                  <?php the_post_thumbnail('pf-portrait'); ?> 
-                                 <div class="single_gallery_item_iner">
+                                  <div class="single_gallery_item_iner">
                                     <div class="gallery_item_text">
                                        <p>PaleFire</p>
                                        <h4><?php the_title(); ?></h4>
