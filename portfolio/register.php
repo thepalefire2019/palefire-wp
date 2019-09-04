@@ -43,7 +43,7 @@ function portfolio_post_type(){
     'menu_position'   => 5  
 );
 
-  register_post_type( 'portfolio', $args );
+  register_post_type( 'pf_portfolio', $args );
 
 }
 // ** ======================================= End of Register Portfolio post type========================
@@ -59,7 +59,7 @@ function create_tax(){
 
   register_taxonomy(
         'portfolio_category',
-        'portfolio',
+        'pf_portfolio',
         array(
             'labels' =>array(
                         'name' =>'Categories',
@@ -108,7 +108,7 @@ function portfolio_url_mbx(){
         'portfolio-url-mbx',
         'Live Url',
         'portfolio_url_mbx_fn',
-        'portfolio',
+        'pf_portfolio',
         'normal',
         'high'
     );
@@ -117,7 +117,7 @@ function portfolio_url_mbx(){
         'portfolio-img-mbx',
         'Screen Shot',
         'portfolio_img_mbx_fn',
-        'portfolio',
+        'pf_portfolio',
         'normal',
         'high'
     );

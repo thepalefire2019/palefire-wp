@@ -48,7 +48,7 @@ get_header();
 
       <?php 
             $all_portfolios = new WP_Query(array(
-                           'post_type' => 'portfolio',
+                           'post_type' => 'pf_portfolio',
                            'posts_per_page' => 3
                            
                          ));
@@ -81,7 +81,7 @@ get_header();
                            $data_category = 1;
                            $get_img = get_the_post_thumbnail_url($post_id, 'pf-portrait');
                            ?>
-                           <a href="portfolio_details.html" class="img-gal width-1 filtr-item" data-category="<?php echo $data_category; ?>" style="background-image: url('<?php echo $get_img; ?>');">
+                           <a href="<?php the_permalink(); ?>" class="img-gal width-1 filtr-item" data-category="<?php echo $data_category; ?>" style="background-image: url('<?php echo $get_img; ?>');">
                               <div class="single_gallery_item">
                                  <!-- <img src="<?php echo $get_img; ?>"> -->
                                   <div class="single_gallery_item_iner">
