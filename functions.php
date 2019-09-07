@@ -54,6 +54,50 @@ function pf_widgets(){
 //  ======================================= End of Widget register========================
 
 
+//  =======================================register language taxonomy========================
+
+add_action( 'init', 'create_tax_language' );
+function create_tax_language(){
+
+  register_taxonomy(
+        'language',
+        'post',
+        array(
+            'labels'              =>array(
+                                        'name'              =>'Languages',
+                                        'singular_name'     => 'Language',
+                                        'search_items'      => 'Search Language',
+                                        'all_items'         => 'All Language',
+                                        'parent_item'       => 'Parent Language',
+                                        'parent_item_colon' => 'Parent Language :',
+                                        'edit_item'         => 'Edit Language',
+                                        'update_item'       => 'Update Language',
+                                        'add_new_item'      => 'Add New Language',
+                                        'new_item_name'     => 'New Language Name',
+                                        'menu_name'         => 'Language',
+                                        'not_found'         =>'No Language found',
+                                        ) ,
+            'rewrite'             => array( 'slug' => 'languages'),
+            'hierarchical'        => true,
+            'show_ui'             => true,
+            'show_admin_column'   =>true,
+            'show_in_menu'        => true,
+            'query_var'           => true,
+            'show_in_nav_menus'   => true,
+            'show_in_quick_edit'  => true,
+            'public'              => true,
+            'publicly_queryable'  => true,
+            'show_in_rest'        => true
+
+        )
+    );
+
+}
+//  =======================================register language taxonomy========================
+
+
+
+
 
 
 

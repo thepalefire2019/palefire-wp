@@ -75,7 +75,7 @@ function create_tax(){
                         'menu_name' => 'Category',
                         'not_found' =>'No category found',
                         ) ,
-            'rewrite' => array( 'slug' => 'product-guide'),
+            'rewrite' => array( 'slug' => 'portfolio-category'),
             'hierarchical' => true,
             'show_ui'       => true,
             'show_admin_column' =>true,
@@ -127,11 +127,18 @@ function portfolio_url_mbx(){
 function portfolio_url_mbx_fn( $portfolio ){
   $portfolio_id = $portfolio->ID;
   $portfolio_url = get_post_meta( $portfolio_id,"portfolio_url",true );
+  $show_url = get_post_meta( $portfolio_id,"show_url",true );
   ?>
   <table>
     <tr>
+      <td></td>
+      <td></td>
+      <td>Show URL</td>
+    </tr>
+    <tr>
       <td><label style="font-weight: bold;">URL :</label></td>
       <td><input type="url" name="portfolio_url" style="border: 1px solid #000;" value="<?php echo $portfolio_url; ?>"></td>
+      <td align="center"><input type="checkbox" name="show_url" value="show" <?php if( $show_url=='show' ){echo 'checked';} ?>></td>
     </tr>
   </table>
   <?php
@@ -189,6 +196,7 @@ function portfolio_img_mbx_fn( $portfolio ){
 add_action("save_post","tg_save_mbx_value");
 function tg_save_mbx_value( $portfolio_id ){
   $portfolio_url  = isset( $_REQUEST['portfolio_url'])?trim($_REQUEST['portfolio_url'] ):"";
+  $show_url  = isset( $_REQUEST['show_url'])?trim($_REQUEST['show_url'] ):"";
   $image_1  = isset( $_REQUEST['image_1'])?trim($_REQUEST['image_1'] ):"";
   $image_2  = isset( $_REQUEST['image_2'])?trim($_REQUEST['image_2'] ):"";
   $image_3  = isset( $_REQUEST['image_3'])?trim($_REQUEST['image_3'] ):"";
@@ -201,6 +209,11 @@ function tg_save_mbx_value( $portfolio_id ){
     update_post_meta( $portfolio_id,"portfolio_url",$portfolio_url );
   }else{
     update_post_meta( $portfolio_id,"portfolio_url","" ); 
+  }
+  if(!empty($show_url)){
+    update_post_meta( $portfolio_id,"show_url",$show_url );
+  }else{
+    update_post_meta( $portfolio_id,"show_url","dont" ); 
   }
 
   if(!empty($image_1)){
