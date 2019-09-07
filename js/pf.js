@@ -19,7 +19,7 @@ $(document).ready(function() {
   	if( x == "" ){
   		setTimeout(function() {
                   $('.cookie').show(1000);
-              }, 2000);
+              }, 5000);
 
   		$('#cookie-okay').click( function(){
   			$('.cookie').hide(1000);

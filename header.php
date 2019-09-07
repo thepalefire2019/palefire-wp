@@ -20,7 +20,7 @@
   <?php wp_head(); ?>
 </head>
 <body>
-  <div class="cookie">
+  <div class="cookie" style="background-image: url('<?php echo get_theme_file_uri("img/cookie-bck.jpg"); ?>'); ">
             <?php if(is_active_sidebar('cookie_consent')) :?>
             <?php dynamic_sidebar('cookie_consent'); ?>
             <?php endif; ?>
