@@ -26,11 +26,27 @@
 						</div>
 					</div>
 
+					<?php
+						$categories= get_the_category();
+						if($categories){
+							$color_id = "category_" . $categories[0]->term_id;
+			                $color = get_option($color_id);
+			                if($color){
+			                  $bgcolor = $color['color'];
+			                }else{
+			                   $bgcolor = '#c8d6e5';
+			                }
+					 ?>
 					<div class="row index-cat">
 						<div class="col-md-12">
-							<a href="#" style="background: #76E8A8;">Category</a>
+							<a href="#" style="background:<?php echo $bgcolor; ?>;"><?php echo $categories[0]->cat_name; ?></a>
 						</div>
 					</div>
+					<?php 
+						}
+					?>
+
+					
 
 					<div class="row block-content">
 						<div class="col-md-4">
@@ -45,7 +61,7 @@
 					<div class="row continue-button">
 						<div class="col-md-4"></div>
 						<div class="col-md-8 ">
-							<a href="#" class="ws-btn-span btn-blue">Continue Reading &rarr; </a>
+							<a href="<?php echo $postUrl; ?>" class="ws-btn-span btn-blue">Continue Reading &rarr; </a>
 						</div>
 					</div>
 				</div>
@@ -64,7 +80,7 @@
 				<div class="row ">
 					<div class="col-md-12 ml-auto mr-auto">
 						<h4 class="right-head">
-							<span>Picks For You</span>
+							<span>Our Projects</span>
 						</h4>
 					</div>	
 				</div>
@@ -75,36 +91,41 @@
 						</h4>
 					</div>	
 				</div>
+				<?php 
+					$side_posts = new WP_Query(array(
+                           'post_type' => 'pf_portfolio',
+                           'posts_per_page' => 4
+                           
+                         ));
+					while( $side_posts->have_posts() ){
+						$side_posts->the_post();
 
+						$portflio_id = get_the_ID();
+						$portfolio_name = get_the_title();
+						$portfolio_content = get_the_content();
+ 						$portfolioUrl = get_the_permalink();
+  						$portfolioImg = get_the_post_thumbnail_url($portflio_id, 'pf-small');
+				?>
 
-				<a href="#" class="right-content-box">
+				<!-- loop starts here -->
+				<a href="<?php echo $portfolioUrl; ?>" class="right-content-box">
 					<div class="row ">
 						<div class="col-md-4">
-							<img class="img-fluid" src="img/panda.jpg">
+							<img class="img-fluid" src="<?php echo $portfolioImg; ?>">
 						</div>
 						<div class="col-md-8">
-							<p>Top Tips for Marketing Agency Owners from DigitalMarketer Certified Partners</p>
+							<p><span class="side-portfolio-title"><?php echo $portfolio_name; ?></span>: <?php echo wp_trim_words( $portfolio_content, 10 ) ?> </p>
 						</div>
 						
 					</div>
 				</a>
+				<?php 
+					} 
+					wp_reset_postdata();
+				?>
+				<!-- loop ends here -->
 
-				<a href="#" class="right-content-box">
-					<div class="row ">
-						<div class="col-md-4">
-							<img class="img-fluid" src="img/panda.jpg">
-						</div>
-						<div class="col-md-8">
-							<p>Top Tips for Marketing Agency Owners from DigitalMarketer Certified Partners</p>
-						</div>
-						
-					</div>
-				</a>
-
-
-
-
-
+				
 
 			</div>
 			<div class="clearfix"></div>
