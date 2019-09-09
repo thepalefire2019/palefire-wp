@@ -24,34 +24,45 @@ while( have_posts() ){
 		<div class="left-container-single">
 			<div class="row top-part">
 				<div class="col-md-12">
-					<div class="feature-img">
-						<img src="<?php echo $postImg; ?>" class="img-fluid">
-					</div>
+						<div class="feature-img" style="position: relative;">
+							<img src="<?php echo $postImg; ?>" class="img-fluid">
+						
 
-					<div class="single-head">
-						<div class="row index-cat">
-							<div class="col-md-12">
-								<a href="#" style="background:<?php echo $bgcolor; ?>;"><?php echo $categories[0]->cat_name; ?></a>
+							<div class="single-head" style="position: absolute;top:350px;">
+								<div class="row index-cat">
+									<div class="col-md-12">
+										<a href="#" style="background:<?php echo $bgcolor; ?>;"><?php echo $categories[0]->cat_name; ?></a>
+									</div>
+								</div>
+								<h1><?php echo $title; ?></h1>
+									<div class="author-img">
+				                		<a href="<?php echo get_author_posts_url(get_the_author_meta('ID')); ?>">
+					                		<?php echo get_avatar(get_the_author_meta('ID')); ?>
+					              		</a>
+					             	</div>
+					             	<div class="author-name">
+					             		<h5>Sarasij Roy </h5>
+					             	</div>
+					             	<div class="clearfix"></div>
 							</div>
 						</div>
-						<h1><?php echo $title; ?></h1>
-							<div class="author-img">
-		                		<a href="<?php echo get_author_posts_url(get_the_author_meta('ID')); ?>">
-			                		<?php echo get_avatar(get_the_author_meta('ID')); ?>
-			              		</a>
-			             	</div>
-			             	<div class="author-name">
-			             		<h5>Sarasij Roy </h5>
-			             	</div>
-			             	<div class="clearfix"></div>
-					</div>
 				</div>
 			</div>
 
 			<div class="row content-area">
 				<div class="col-md-12">
-					<p>The Sarasij</p>
+					<div style="margin-top: 150px">
+					<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+
+					</p>
+					<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+
+					</p>
 				</div>
+				</div>
+			</div>
+			<div style="">
+				<div style="height:200px;width:85%;background-color:red;"></div>
 			</div>
 		</div>
 		<!-- left-container-single -->
