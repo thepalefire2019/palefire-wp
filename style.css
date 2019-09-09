@@ -4901,6 +4901,9 @@ header{
 .author-name{
     float: left; margin: 35px 0 0 26px;
 }
+.author-desc{
+    float:left;
+}
 .content-area{
 
 }

@@ -43,6 +43,9 @@ while( have_posts() ){
 					             	<div class="author-name">
 					             		<h5>Sarasij Roy </h5>
 					             	</div>
+					             	<div class="author-desc">
+					             		<p>I am the author </p>
+					             	</div>
 					             	<div class="clearfix"></div>
 							</div>
 						</div>
