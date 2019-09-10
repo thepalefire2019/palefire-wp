@@ -4801,6 +4801,7 @@ header{
 .btn-small{font-size: 12px}
 .btn-medium{font-size: 18px}
 .btn-large{font-size: 25px}
+.hide{display: none;}
 
 .left-container{
     width: 65%;  height: auto; float: left;
@@ -4872,23 +4873,20 @@ header{
 }
 /** single **/
 .left-container-single{
-    float: left; border:1px solid #000; width: 75%; height: auto;
-}
-.right-container-single{
-    float:right; border:1px solid #000; width: 20%; height: 400px;
+    float: left;  width: 75%; height: auto;
 }
 .top-part{
     height: 80%;
 }
 .feature-img{
-   
+    position: relative;
 }
 .single-head{
-    width: 70%; margin:0 0 0 30px;   background-color: #fff;
-    padding: 20px 20px 25px 20px; border-radius: 5px; box-shadow: 2px 2px 5px 1px rgba(0,0,0,0.1)
+    width: 80%; margin:0 0 0 30px;   background-color: #fff; position: absolute;top:350px;
+    padding: 20px 20px 25px 20px; border-radius: 5px; box-shadow: 2px 2px 5px 1px rgba(0,0,0,0.5)
 }
 .single-head h1{
-    font-size:40px; margin-top: 20px;
+    font-size:44px; margin-top: 20px; font-weight: 600; 
 }
 .author-img{
      width: 90px; height: 90px;  display: block; overflow: hidden;  
@@ -4901,15 +4899,26 @@ header{
 .author-name{
     float: left; margin: 35px 0 0 26px;
 }
-.author-desc{
-    float:left;
+.content-date{
+    float:left; margin: 31px 0 0 40px; font-weight: 500;
 }
 .content-area{
 
 }
-.content-area p{
-   
+.content-p{
+    margin-top: 150px; padding: 35px 20px 10px 30px; text-align: left; text-align: justify; 
+    border-bottom: 2px solid #ddd;
 }
+.content-p p{
+   font-size: 19px; padding-bottom: 25px; color: #2C3E50; line-height: 28px; font-weight: 400; word-spacing: 2px;
+}
+.single-content-bottom{
+    height:auto;width:85%; margin: 10px auto; list-style: none;
+}
+.right-container-single{
+    float:right;  width: 21%; height: 400px; margin-top: 30px;
+}
+
 
 
 

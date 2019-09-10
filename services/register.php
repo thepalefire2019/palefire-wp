@@ -40,7 +40,7 @@ function services_post_type(){
       'menu_position'   => 5  
 	);
 
-	register_post_type( 'services', $args );
+	register_post_type( 'pf_services', $args );
 }
 
 // ** ======================================= End of Register Service post type========================
