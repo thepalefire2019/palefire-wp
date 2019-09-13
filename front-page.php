@@ -49,7 +49,7 @@ get_header();
       <?php 
             $all_portfolios = new WP_Query(array(
                            'post_type' => 'pf_portfolio',
-                           'posts_per_page' => 3
+                           'posts_per_page' => 2
                            
                          ));
             if( $all_portfolios->have_posts() ){
@@ -65,21 +65,38 @@ get_header();
                   </div>
                </div>
             </div>
-            <!-- loop starts here -->
+            
+            <div class="container">
+               <div class="row">
+                  <!-- loop starts here -->
                       <?php 
                         while( $all_portfolios->have_posts() ){
                            $all_portfolios->the_post();
                            $post_id = get_the_ID();
-                          
+                           $post_url = get_the_permalink();
                            $get_img = get_the_post_thumbnail_url($post_id, 'pf-portrait');
-                           
-                        }
-                        wp_reset_postdata();
+                           $port_title = get_the_title();
+                           $port_content = get_the_content();
+                       
                       ?>
 
-            <div class="container">
-               <div class="row">
                   <div class="col-md-6 col-xs-12">
+                     <a href="<?php echo $post_url; ?>">
+                        <div class="front-port img-fluid" >
+                           <img src="<?php echo $get_img; ?>">
+                           <div class="front-port-shade">
+                              <h2><?php echo $port_title; ?></h2>
+                              <p> <?php echo wp_trim_words( $port_content, 15 ) ?></p>
+                           </div> 
+                        </div>
+                     </a>
+                  </div>
+                  <?php 
+                      }
+                        wp_reset_postdata();
+                  ?>
+
+                 <!--  <div class="col-md-6 col-xs-12">
                      <a href="#">
                         <div class="front-port img-fluid" >
                            <img src="<?php echo get_theme_file_uri('img/banner_bg.jpg'); ?>">
@@ -89,18 +106,7 @@ get_header();
                            </div> 
                         </div>
                      </a>
-                  </div>
-                  <div class="col-md-6 col-xs-12">
-                     <a href="#">
-                        <div class="front-port img-fluid" >
-                           <img src="<?php echo get_theme_file_uri('img/banner_bg.jpg'); ?>">
-                           <div class="front-port-shade">
-                              <h2>ICOBUS</h2>
-                              <p>Here will lie the desc Here will lie the desc Here will lie the desc Here will lie the desc</p>
-                           </div> 
-                        </div>
-                     </a>
-                  </div>
+                  </div> -->
                </div>   
                <div class="row portfolio-btn">
                   <div class="col-md-4"></div>

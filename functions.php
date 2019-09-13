@@ -21,7 +21,7 @@ function site_setup(){
    add_image_size('pf-regular',820,461 );
    add_image_size('pf-medium',560,315 );
    add_image_size('pf-small', 160,90 );
-   add_image_size('pf-porfolio-portrait', 445,650);
+   add_image_size('pf-porfolio-portrait', 612,580);
    add_theme_support('html5',array('comment-list','comment-form','search-form','gallery'));
 
    //Add Custom Title    
