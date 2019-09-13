@@ -64,8 +64,10 @@
 					<div class="row continue-button">
 						<div class="col-md-4"></div>
 						<div class="col-md-8 ">
-							<a href="<?php echo $postUrl; ?>" class="ws-btn-span btn-blue">Continue Reading &rarr; </a>
+							<a href="<?php echo $postUrl; ?>" class="ws-btn-span btn-blue res-btn">Continue Reading &rarr; </a>
+							<div class="clearfix"></div>
 						</div>
+
 					</div>
 				</div>
 				<!-- End of loop -->

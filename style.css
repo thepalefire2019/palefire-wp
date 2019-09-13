@@ -4943,12 +4943,5 @@ header{
 
 
 
-@media(max-width:576px){
-    .left-container-single{
-    width: 100%;
-    }
-    .right-container-single{
-        display: none;
-    }
-}
+
 /** end sarasij **/

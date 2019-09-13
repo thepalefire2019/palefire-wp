@@ -39,7 +39,7 @@ while( have_posts() ){
 							<img src="<?php echo $postImg; ?>" class="img-fluid">
 						
 
-							<div class="single-head" style="">
+							<div class="single-head" >
 								<div class="row index-cat">
 									<div class="col-md-12">
 										<a href="#" style="background:<?php echo $bgcolor; ?>;"><?php echo $categories[0]->cat_name; ?></a>
