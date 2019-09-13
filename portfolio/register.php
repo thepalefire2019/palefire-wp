@@ -167,14 +167,14 @@ function portfolio_img_mbx_fn( $portfolio ){
     </tr>
 
     <tr>
-      <td><label style="font-weight: bold;">Image 3 :</label></td>
+      <td><label style="font-weight: bold;">Image 3 Mobile:</label></td>
       <td><input type="button" name="" class="button button-primary" id="add-image-btn-3" value="Add Image"></td>
       <td><input type="text" name="image_3" id="img_text_3"   value="<?php echo $image_3; ?>" hidden></td>
       <td><img src="<?php echo $image_3;  ?>" height="40" width="40" id="img_3"></td>
 
       <td width="135"></td>
 
-      <td><label style="font-weight: bold;">Image 4 :</label></td>
+      <td><label style="font-weight: bold;">Image 4 Mobile:</label></td>
       <td><input type="button" name="" class="button button-primary" id="add-image-btn-4" value="Add Image"></td>
       <td><input type="text" name="image_4" id="img_text_4"   value="<?php echo $image_4; ?>" hidden></td>
       <td><img src="<?php echo $image_4;  ?>" height="40" width="40" id="img_4"></td>
