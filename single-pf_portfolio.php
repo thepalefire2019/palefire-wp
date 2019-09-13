@@ -68,9 +68,17 @@ get_header();
 		         <p>Content
 		         </p>
 		         <br><br>
-		         <h4>Working process</h4>
-		         <p>Content
-		         </p>
+		         <h4>Project Screenshots</h4>
+		         <div class="container">
+		         	<div class="row">
+		         		<div class="col-lg-6" style="background: gray">
+		         			<img src="https://media.istockphoto.com/photos/black-smartphone-with-blank-screen-picture-id880911882?k=6&m=880911882&s=612x612&w=0&h=HCmnjZGz1MI4ZZbtbQwbD80QrjoxR6H3rX4oLtNBuf0=">
+		         		</div>
+		         		<div class="col-lg-6" style="background: gray">
+		         			<img src="https://www.sccpre.cat/mypng/detail/4-44999_laptop-mockup-placeholder-laptop-frame.png">
+		         		</div>
+		         	</div>
+		         </div>
 		      </div>
 		   </div>
 		</div>
