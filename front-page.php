@@ -65,109 +65,53 @@ get_header();
                   </div>
                </div>
             </div>
-            <div class="row">
-               <div class="col-xl-12">
-                  <div class="gallery_part_item filtr-container">
-
-                     <!-- loop starts here -->
-                     <?php 
-                         
-                      ?>
-
+            <!-- loop starts here -->
                       <?php 
                         while( $all_portfolios->have_posts() ){
                            $all_portfolios->the_post();
                            $post_id = get_the_ID();
-                           $data_category = 1;
+                          
                            $get_img = get_the_post_thumbnail_url($post_id, 'pf-portrait');
-                           ?>
-                           <a href="<?php the_permalink(); ?>" class="img-gal width-1 filtr-item" data-category="<?php echo $data_category; ?>" style="background-image: url('<?php echo $get_img; ?>');">
-                              <div class="single_gallery_item">
-                                 <!-- <img src="<?php echo $get_img; ?>"> -->
-                                  <div class="single_gallery_item_iner">
-                                    <div class="gallery_item_text">
-                                       <p>PaleFire</p>
-                                       <h4><?php the_title(); ?></h4>
-                                    </div>
-                                 </div>
-                              </div>
-                           </a>
-
-
-                           <?php
-                           $data_category++;
+                           
                         }
                         wp_reset_postdata();
                       ?>
 
-
-                     
-
-                     <!-- loop ends here -->
-                     <!-- <a href="portfolio_details.html" class="img-gal width-1 filtr-item" data-category="2" style="">
-                        <div class="single_gallery_item">
-                           Image
-                           <div class="single_gallery_item_iner">
-                              <div class="gallery_item_text">
-                                 <p>PaleFire</p>
-                                 <h4>Project Name 2</h4>
-                              </div>
-                           </div>
-                        </div> 
-                     </a>
-
-                     <a href="portfolio_details.html" class="img-gal width-2 filtr-item" data-category="3" style="">
-                        <div class="single_gallery_item">
-                           Image
-                           <div class="single_gallery_item_iner">
-                              <div class="gallery_item_text">
-                                 <p>PaleFire</p>
-                                 <h4>Project Name 3</h4>
-                              </div>
-                           </div>
+            <div class="container">
+               <div class="row">
+                  <div class="col-md-6 col-xs-12">
+                     <a href="#">
+                        <div class="front-port img-fluid" >
+                           <img src="<?php echo get_theme_file_uri('img/banner_bg.jpg'); ?>">
+                           <div class="front-port-shade">
+                              <h2>ICOBUS</h2>
+                              <p>Here will lie the desc Here will lie the desc Here will lie the desc Here will lie the desc</p>
+                           </div> 
                         </div>
                      </a>
-
-                     <a href="portfolio_details.html" class="img-gal width-2 filtr-item" data-category="4" style="">
-                        <div class="single_gallery_item">
-                           Image
-                           <div class="single_gallery_item_iner">
-                              <div class="gallery_item_text">
-                                 <p>PaleFire</p>
-                                 <h4>Project Name 4</h4>
-                              </div>
-                           </div>
-                        </div>
-                     </a>
-
-                     <a href="portfolio_details.html" class="img-gal width-1 filtr-item" data-category="1" style="">
-                        <div class="single_gallery_item">
-                           Image
-                           <div class="single_gallery_item_iner">
-                              <div class="gallery_item_text">
-                                 <p>PaleFire</p>
-                                 <h4>Project Name5</h4>
-                              </div>
-                           </div>
-                        </div>
-                     </a>
-
-                     <a href="portfolio_details.html" class="img-gal filtr-item" data-category="2" style="">
-                        <div class="single_gallery_item">
-                           Image
-                           <div class="single_gallery_item_iner">
-                              <div class="gallery_item_text">
-                                 <p>PaleFire</p>
-                                 <h4>Project Name6</h4>
-                              </div>
-                           </div>
-                        </div>
-                     </a> -->
-
-
                   </div>
-               </div>
+                  <div class="col-md-6 col-xs-12">
+                     <a href="#">
+                        <div class="front-port img-fluid" >
+                           <img src="<?php echo get_theme_file_uri('img/banner_bg.jpg'); ?>">
+                           <div class="front-port-shade">
+                              <h2>ICOBUS</h2>
+                              <p>Here will lie the desc Here will lie the desc Here will lie the desc Here will lie the desc</p>
+                           </div> 
+                        </div>
+                     </a>
+                  </div>
+               </div>   
+               <div class="row portfolio-btn">
+                  <div class="col-md-4"></div>
+                  
+                  <div class="col-md-4 portfolio-btn">
+                     <a href="<?php echo site_url('/portfolios'); ?>" class="btn_2">read more</a>
+                  </div>
+                  <div class="col-md-4"></div>
+               </div>    
             </div>
+
          </div>
       </section>
 
