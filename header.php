@@ -55,9 +55,11 @@
                            <!-- <li class="nav-item">
                               <a class="nav-link" href="#">services</a>
                            </li> -->
-                           <li class="nav-item">
+
+                           <!-- <li class="nav-item">
                               <a class="nav-link" href="<?php echo site_url('/portfolios'); ?>">portfolio</a>
-                           </li>
+                           </li> -->
+                           
                            <li class="nav-item dropdown">
                               <a class="nav-link dropdown-toggle" href="<?php echo site_url('/blog'); ?>">blog</a>
                               <div class="dropdown-menu" aria-labelledby="navbarDropdown">
@@ -67,9 +69,9 @@
                                 <a class="dropdown-item" href="<?php echo site_url('/bengali'); ?>">Bengali</a>
                               </div>
                            </li>
-                           <li class="nav-item">
+                           <!-- <li class="nav-item">
                               <a class="nav-link" href="<?php echo site_url('/contact'); ?>">contact</a>
-                           </li>
+                           </li> -->
                         </ul>
                      </div>
                      
