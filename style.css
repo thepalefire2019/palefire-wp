@@ -4983,6 +4983,48 @@ header{
     color: #fff; font-size: 18px; padding: 4px 8px; border:2px solid #fff; width: fit-content;
     margin:20px 40px 0 0 ;float: right;
 }
+@import "https://fonts.googleapis.com/css?family=Oswald:400,500,600,700|Roboto:400,500,700&amp;display=swap";
+        
+.clearfix{clear: both;}
+
+.space140{width: 100%; height: 140px;}
+.about-banner{width: 100%; height: 450px;}
+.about-banner-img{ position: relative; }
+.about-banner-img img{width: 100%; height: 100vh;}
+.about-banner-content{position: absolute; width: 100%; height: 100%; background-color: rgba(0,0,0,0.2);top:0px;}
+.about-banner-content h5{text-transform: uppercase; font-size: 16px; color: #fff; text-align: center; font-weight: bold;margin-top: 80px;margin-bottom: 40px;}
+.about-banner-content h1{color: #fff; width:60%; text-align: center; font-size: 82px; margin-left: 20%;line-height: 140px;}
+.about-palefire{ margin:300px 0 0 0;  }
+.border-div-parent{width: 608px; height: 608px;}
+.border-div{position: relative; width:454px;height: 475px; background-color: #000;}
+.left-image-about{position: absolute; height: 590px; width: 590px; top:15px; left: 15px;}
+.left-image-about img{height: 590px; width: 590px;}
+.about-content-parent{margin-top: 90px;}
+.about-content h4{font-size: 16px;font-family:Helvetica, Arial, sans-serif;line-height: 24px;vertical-align: baseline;letter-spacing: 4.5px; word-spacing: 0px; font-weight: 400;text-transform: uppercase;text-align: start; margin-bottom: 17px;}
+.about-content .underline-about{border-top: 2px solid #000;width:20%; margin-top:10px;}
+.about-content h2{font-size: 25px; font-family: "Nike TG", "Arial black", "Arial Bold", Arial, sans-serif; line-height: 32.5px;vertical-align: baseline;word-spacing: 0px;letter-spacing: 1px; font-weight: 700;text-align: start;text-transform: uppercase;text-indent: 0px; margin-top: 30px}
+
+.about-content p{font-family: Helvetica, Arial, sans-serif;color: #8a8a8a !important; font-size: 16px;line-height: 27.4286px;vertical-align: baseline;letter-spacing: normal;word-spacing: 0px;font-weight: 400;font-style: normal;font-variant: normal;text-align: start; text-indent: 0px;}
+.to-do-content-parent{margin-top: 90px;}
+.choose-content-parent{margin-top: 150px;}
+.mobile-about{display: none;}
+@media(max-width: 576px){
+.about-banner-content h1{width: 100%;font-size: 52px;margin-left: 0;line-height: 70px;}
+.border-div-parent{width:100%;height: 400px; }
+.border-div{width: 90%;height: 280px;}
+.left-image-about{width: 100%;height:380px}
+.left-image-about img{width: 100%;height:380px}
+.web-about{display: none}
+.mobile-about{display: block;}
+.about-banner{margin-bottom: 250px;}
+.space140{height: 40px;}
+.about-palefire{ margin:50px 0 0 0;  }
+.about-content-parent{margin-top: 70px;}
+.to-do-content-parent{margin-top: 70px;}
+.choose-content-parent{margin-top: 70px;}
+.about-banner-content h5{margin-top: 150px;}
+
+}
 
 
 
