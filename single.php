@@ -79,33 +79,39 @@ while( have_posts() ){
 			
 		</div>
 		<!-- left-container-single -->
+
+
+
+
+
+
 		<div class="right-container-single">
 			<!-- starts if -->
 			<?php if( $social_add == 1 ){ ?>
 			<div class="row ">
-					<div class="col-md-12 ml-auto mr-auto">
-						<h4 class="right-head">
-							<span>Follow <?php echo get_the_author_meta('first_name') ?> On</span>
-						</h4>
-					</div>	
-				</div>
-				<div class="row">
-					<div class="col-md-12 ml-auto mr-auto">
-						<h4 class="right-head">
-							<span></span>
-						</h4>
-					</div>	
-				</div>
+				<div class="col-md-12 ml-auto mr-auto">
+					<h4 class="right-head">
+						<span>Follow <?php echo get_the_author_meta('first_name') ?> On</span>
+					</h4>
+				</div>	
+			</div>
+			<div class="row">
+				<div class="col-md-12 ml-auto mr-auto">
+					<h4 class="right-head">
+						<span></span>
+					</h4>
+				</div>	
+			</div>
 
 				<?php if( $author_facebook == 1 ){ ?>
 
 				<a href="<?php echo $author_facebook_url; ?>" class="right-content-box">
-					<div class="row ">
-						<div class="col-md-4">
+					<div class="row mobile-gap-side">
+						<div class="col-md-4 col-4 side-small-img">
 							<img class="img-fluid" src="<?php echo get_theme_file_uri('img/fb2.png'); ?>">
 						</div>
-						<div class="col-md-8">
-							<p><span class="side-portfolio-title">Click Here!</span>: <br>Folow my work on Facebook. </p>
+						<div class="col-md-8 col-8 hang">
+							<p><span class="side-portfolio-title">Click Here!</span> <br>Follow my work on Facebook. </p>
 						</div>
 						
 					</div>
@@ -116,11 +122,11 @@ while( have_posts() ){
 				 ?>
 
 				 <a href="<?php echo $author_twitter_url; ?>" class="right-content-box">
-					<div class="row ">
-						<div class="col-md-4">
+					<div class="row mobile-gap-side">
+						<div class="col-md-4 col-4 side-small-img">
 							<img class="img-fluid" src="<?php echo get_theme_file_uri('img/twit.png'); ?>">
 						</div>
-						<div class="col-md-8">
+						<div class="col-md-8 col-8 hang">
 							<p><span class="side-portfolio-title">Click Here!</span>: <br>Folow my work on Twitter. </p>
 						</div>
 						
@@ -131,11 +137,11 @@ while( have_posts() ){
 						if( $author_instagram == 1 ){
 				?>
 				<a href="<?php echo $author_instagram_url; ?>" class="right-content-box">
-					<div class="row ">
-						<div class="col-md-4">
+					<div class="row mobile-gap-side">
+						<div class="col-md-4 col-4 side-small-img">
 							<img class="img-fluid" src="<?php echo get_theme_file_uri('img/insta.png'); ?>">
 						</div>
-						<div class="col-md-8">
+						<div class="col-md-8 col-8 hang">
 							<p><span class="side-portfolio-title">Click Here!</span>: <br>Folow my work on Instagram. </p>
 						</div>
 						
@@ -146,11 +152,11 @@ while( have_posts() ){
 						if( $author_youtube == 1 ){
 				?>
 				<a href="<?php echo $author_youtube_url; ?>" class="right-content-box">
-					<div class="row ">
-						<div class="col-md-4">
+					<div class="row mobile-gap-side">
+						<div class="col-md-4 col-4 side-small-img">
 							<img class="img-fluid" src="<?php echo get_theme_file_uri('img/youtube.png'); ?>">
 						</div>
-						<div class="col-md-8">
+						<div class="col-md-8 col-8 hang">
 							<p><span class="side-portfolio-title">Click Here!</span>: <br>Follow my channel in Youtube. </p>
 						</div>
 						
@@ -168,7 +174,7 @@ while( have_posts() ){
 				<!-- ends if ....starts else -->
 				<div class="row ">
 					<div class="col-md-12 ml-auto mr-auto">
-						<h4 class="right-head">
+						<h4 class="right-head ">
 							<span>Our services</span>
 						</h4>
 					</div>	
@@ -182,6 +188,7 @@ while( have_posts() ){
 				</div>
 				<?php while( $all_services->have_posts() ){ 
 						$all_services->the_post();
+
 						$services_id = get_the_ID();
 						$services_name = get_the_title();
 						$services_content = get_the_content();
@@ -189,11 +196,11 @@ while( have_posts() ){
   						$servicesImg = get_the_post_thumbnail_url($services_id, 'pf-small');
 				?>
 				<a href="<?php echo $servicesUrl ; ?>" class="right-content-box">
-					<div class="row ">
-						<div class="col-md-4">
+					<div class="row mobile-gap-side">
+						<div class="col-md-4 col-4 side-small-img">
 							<img class="img-fluid" src="<?php echo $servicesImg; ?>">
 						</div>
-						<div class="col-md-8">
+						<div class="col-md-8 col-8 ">
 							<p><span class="side-portfolio-title"><?php echo $services_name; ?></span>: <?php  echo wp_trim_words( $services_content, 10 ) ;?> </p>
 						</div>
 						
@@ -207,8 +214,62 @@ while( have_posts() ){
 
 
 		</div>
+		<!-- right-container-single -->
+
 		<div class="clearfix"></div>
+
+		<?php 
+			$posts_by_author = new WP_Query(array(
+                  'author' => get_the_author_meta('ID'),
+                  'posts_per_page' => 3,
+                  'post__not_in' => array($post_id)
+                ));
+			if( $posts_by_author->have_posts() ){
+                ?>
+			
+            <div class="postbyauthor">
+            	<div class="row author-post-header">
+                  <div class="col-md-12 col-12">
+                     <h1>Related Posts By <?php echo get_the_author_meta('first_name')  ?> </h1>
+                     <p></p>
+                  </div>
+               </div>
+				<div class="row">    
+                <?php
+			while( $posts_by_author->have_posts() ){
+				$posts_by_author->the_post();
+
+				$author_post_id = get_the_ID();
+				$author_post_title = get_the_title();
+				$author_post_content = get_the_content();
+				$author_postUrl = get_the_permalink();
+				$author_postImg = get_the_post_thumbnail_url($author_post_id, 'pf-medium');
+
+		?>
+		
+				<div class="col-md-4 col-12 ">
+					<a href="#">
+						<div class="author-post-box">
+							<img src="<?php echo $author_postImg  ?>" class="img-fluid">
+							<div class="author-post-box-shade">
+								<h1><?php echo $author_post_title; ?></h1>
+								<p><?php echo wp_trim_words( $author_post_content, 18 ); ?></p>
+								<h6>Read More</h6>
+								<div class="clearfix"></div>
+							</div>
+						</div>
+					</a>
+				</div>
+				<?php  
+				 } //while
+				}//if
+				 wp_reset_postdata();
+				 ?>
+			</div>
+		</div>
+
 	</div>
+	<!-- container -->
 
 
 

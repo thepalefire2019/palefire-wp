@@ -67,6 +67,7 @@ get_header();
             </div>
             
             <div class="container">
+               
                <div class="row">
                   <!-- loop starts here -->
                       <?php 

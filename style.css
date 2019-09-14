@@ -4914,7 +4914,7 @@ header{
     height:auto;width:85%; margin: 10px auto; list-style: none;
 }
 .right-container-single{
-    float:right;  width: 21%; height: 400px; margin-top: 30px;
+    float:right;  width: 21%; height: auto; margin-top: 30px;
 }
 
 .front-port{
@@ -4939,8 +4939,50 @@ header{
 .portfolio-btn{
     margin: 10px 0 0 50px;
 }
-
-
+.phone-view{
+    display: none; 
+}
+.web-view{
+    display: block
+}
+.border{
+    border:5px solid #000 !important; border-radius: 50px; background-color: #fff 
+}
+.author-post-header{
+    margin: 20px 0 40px 0; 
+}
+.author-post-header h1{
+    color: #273427; margin: 0; font-weight: 900; text-shadow: 2px 2px #ddd; font-size: 31px;
+}
+.author-post-header p{
+    border-top: 4px solid #000; width: 7%;margin-top:10px; 
+}
+.postbyauthor{
+    margin-bottom: 30px;
+}
+.author-post-box{
+    position: relative; height: 215px; width: 350px; box-shadow: 3px 2px 5px rgba(0,0,0,0.2);
+}
+.author-post-box img{
+    width: 350px; height: 215px;
+}
+.author-post-box-shade{
+    position: absolute; width: 100%; height:100%;background-color: rgba(0,0,0,0.7); transition: all 1s ease-out;
+    opacity: 0;top:0px; 
+}
+.author-post-box-shade:hover{
+    opacity: 1
+}
+.author-post-box-shade h1{
+    color: #fff; font-size: 21px; padding: 10px 22px; line-height: 28px;
+}
+.author-post-box-shade p{
+    color: #fff;width:80%; margin:0 0 0 20px; font-size: 12px;line-height: 18px;
+}
+.author-post-box-shade h6{
+    color: #fff; font-size: 18px; padding: 4px 8px; border:2px solid #fff; width: fit-content;
+    margin:20px 40px 0 0 ;float: right;
+}
 
 
 

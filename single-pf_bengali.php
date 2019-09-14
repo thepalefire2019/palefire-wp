@@ -159,7 +159,7 @@ while( have_posts() ){
 			<?php } ?>
 				<?php }else{ 
 						 $all_services = new WP_Query(array(
-                           'post_type' => 'pf_services',
+                           'post_type' => 'pf_portfolio',
                            'posts_per_page' => 6
                            
                          ));
@@ -169,7 +169,7 @@ while( have_posts() ){
 				<div class="row ">
 					<div class="col-md-12 ml-auto mr-auto">
 						<h4 class="right-head">
-							<span>Our services</span>
+							<span>Our Works</span>
 						</h4>
 					</div>	
 				</div>
@@ -208,7 +208,58 @@ while( have_posts() ){
 
 		</div>
 		<div class="clearfix"></div>
+		<?php 
+			$posts_by_author = new WP_Query(array(
+                  'author' => get_the_author_meta('ID'),
+                  'posts_per_page' => 3,
+                  'post__not_in' => array($beng_post_id),
+                  'post_type' => 'pf_bengali',
+                ));
+			if( $posts_by_author->have_posts()){
+                ?>
+			
+            <div class="postbyauthor">
+            	<div class="row author-post-header">
+                  <div class="col-md-12 col-12">
+                     <h1>Related Posts By <?php echo get_the_author_meta('first_name')  ?> </h1>
+                     <p></p>
+                  </div>
+               </div>
+				<div class="row">    
+                <?php
+			while( $posts_by_author->have_posts() ){
+				$posts_by_author->the_post();
+
+				$author_post_id = get_the_ID();
+				$author_post_title = get_the_title();
+				$author_post_content = get_the_content();
+				$author_postUrl = get_the_permalink();
+				$author_postImg = get_the_post_thumbnail_url($author_post_id, 'pf-medium');
+
+		?>
+		
+				<div class="col-md-4 col-12 ">
+					<a href="#">
+						<div class="author-post-box">
+							<img src="<?php echo $author_postImg  ?>" class="img-fluid">
+							<div class="author-post-box-shade">
+								<h1><?php echo $author_post_title; ?></h1>
+								<p><?php echo wp_trim_words( $author_post_content, 18 ); ?></p>
+								<h6>Read More</h6>
+								<div class="clearfix"></div>
+							</div>
+						</div>
+					</a>
+				</div>
+				<?php  
+				 } //while
+				}//if
+				 wp_reset_postdata();
+				 ?>
+			</div>
+		</div>
 	</div>
+	<!-- container -->
 
 
 
