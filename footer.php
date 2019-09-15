@@ -40,9 +40,9 @@
                         </form>
                      </div>
                      <div class="social_icon">
-                        <a href="#"> <i class="fab fa-facebook-f"></i> </a>
-                        <a href="#"> <i class="fab fa-twitter"></i> </a>
-                        <a href="#"> <i class="fab fa-skype"></i> </a>
+                        <a href="https://www.facebook.com/thepalefire/"> <i class="fab fa-facebook-f"></i> </a>
+                        <a href="https://twitter.com/Palefire16"> <i class="fab fa-twitter"></i> </a>
+                        
                      </div>
                   </div>
                </div>
