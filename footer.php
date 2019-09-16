@@ -70,4 +70,3 @@
 	</body>
 </html>
 
-https://www.thepalefire.com/wp-json/wp/v2/posts/
