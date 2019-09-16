@@ -202,7 +202,7 @@ get_header();
                               </div>
                               <div class="post_text_1 pr_30">
                                  <h5><span> By <?php echo get_the_author_meta('first_name')." ".get_the_author_meta('last_name'); ?></span> / <?php the_time('d.m.Y'); ?></h5>
-                                 <a href="<?php echo thepermalink(); ?>">
+                                 <a href="<?php thepermalink() ?>">
                                     <h3><?php the_title(); ?></h3>
                                  </a>
                                  <p><?php echo wp_trim_words( get_the_content(),18 ); ?>
