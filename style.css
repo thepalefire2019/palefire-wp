@@ -5010,196 +5010,34 @@ header{
 .mobile-about{display: none;}
 .fea_cat{margin-bottom: 20px;}
 :root{ --main-color: #000;font-size: 10px;}
-
-
-.ws-primary-banner{
-            position: relative;
-            height:80vh ;
-            width: 100%;
-            top: 10vh;
-            margin-bottom: 10vh;
-            z-index: 8;
-            display: flex;
-            align-items: center;
-
+.ws-primary-banner{position: relative;height:80vh ;width: 100%;top: 10vh;margin-bottom: 10vh;z-index: 8;
+    display: flex;align-items: center;}
+.ws-banner-info{background: rgba(252,252,251,0.8);width: 70%;position: relative;}
+.ws-banner-content{padding: 60px;width:100%;height: 80%;overflow: hidden;}
+.ws-banner-content h1{font-size: 6rem;padding-bottom: 3rem;margin-bottom: 2rem;line-height: 4rem;
+    border-bottom: 2px solid var(--main-color);width: fit-content;}
+.ws-banner-content p{font-size: 2rem;padding-top: 1rem;text-align: justify;}
+.ws-link{position: absolute;bottom:0;right: 0;width: 180px;height: 40px;background-color: var(--main-color);
+    overflow: hidden;}           
+.ws-discover{float: left;padding: 8px;width:80%;height: 100%;overflow: hidden;}
+.ws-link a{font-size: 1.7rem;color: #FFFFFF;text-decoration: none;font-family: "Gotham SSm A","Gotham SSm B";font-weight: 500;font-style: normal;
+    position: relative;text-align: center;}
+.ws-link:hover{}
+.ws-link a:hover{text-decoration: none;color: #fff;}
+.ws-link a span{position: absolute;width: 100%;height: 100%;top: 0;left: 0;transition: .5s ease-in-out;
+    background: rgba(255,255,255,.3);}
+.ws-link:hover a span{left: 120%;}
+.ws-arrow{position: absolute;right: 0;height: 100%;width: 20%;background-color: var(--main-color);
+    overflow: hidden;
 }
-.ws-banner-info{
-
-            background: rgba(252,252,251,0.8);
-            width: 70%;
-            position: relative;
-
-}
-
-
-.ws-banner-content{
-
-            padding: 60px;
-            width:100%;
-            height: 80%;
-            overflow: hidden;
-}
-
-
-.ws-banner-content h1{
-
-            font-size: 6rem;
-            padding-bottom: 3rem;
-            margin-bottom: 2rem;
-            line-height: 4rem;
-            border-bottom: 2px solid var(--main-color);
-            width: fit-content;
-            
-}
-
-
-.ws-banner-content p{
-
-            font-size: 2rem;
-            padding-top: 1rem;
-            text-align: justify;
-            
-}
-
-/*============= Arrow Link ===================*/
-.ws-link{
-
-            position: absolute;
-            bottom:0;
-            right: 0;
-            width: 180px;
-            height: 40px;
-            background-color: var(--main-color);
-            overflow: hidden;
-}           
-
-
-.ws-discover{
-
-            float: left;
-            padding: 8px;
-            width:80%;
-            height: 100%;
-            overflow: hidden;
-}
-
-
-.ws-link a{
-    
-            font-size: 1.7rem;
-            color: #FFFFFF;
-            text-decoration: none;
-            font-family: "Gotham SSm A","Gotham SSm B";
-            font-weight: 500;
-            font-style: normal;
-            position: relative;
-            text-align: center;
-}
-
-
-.ws-link:hover{
-    
-}
-
-
-.ws-link a:hover{
-    
-            text-decoration: none;
-            color: #fff;
-}
-
-
-.ws-link a span{
-    
-            position: absolute;
-            width: 100%;
-            height: 100%;
-            top: 0;
-            left: 0;
-            transition: .5s ease-in-out;
-            background: rgba(255,255,255,.3);
-    
-}
-
-
-.ws-link:hover a span{
-            
-            left: 120%;
-}
-
-
-.ws-arrow{
-            
-            position: absolute;
-            right: 0;
-            height: 100%;
-            width: 20%;
-            background-color: var(--main-color);
-            overflow: hidden;
-}
-
-
-.ws-arrow span.one{
-            
-            width: 20px;
-            height: 1px;
-            background-color: #fff;
-            position: absolute;
-            top: 20px;
-            right: 10px;
-}
-
-
-.ws-arrow span.two{
-
-            width: 20px;
-            height: 1px;
-            background-color: #fff;
-            position: absolute;
-            top: 20px;
-            right: 80px;
-}   
-
-
-.ws-arrow span::before{
-
-            content: '';
-            display: inline-block;
-            width: 10px;
-            height: 1px;
-            background-color: #fff;
-            transform: rotate(45deg);
-            position: absolute;
-            right: -1px;
-            bottom: 3px;
-}
-
-
-.ws-arrow span::after{
-
-            content: '';
-            display: inline-block;
-            width: 10px;
-            height: 1px;
-            background-color: #fff;
-            transform: rotate(135deg);
-            position: absolute;
-            right: -1px;
-            top: 3px;
-}
-
-
-.ws-link:hover span.one{
-
-            right:-60px;
-            transition: .5s ease-in-out .1s;
-}
-
-.ws-link:hover span.two{
-
-            right: 10px;
-            transition: .5s ease-in-out .1s;
-}
+.ws-arrow span.one{width: 20px;height: 1px;background-color: #fff;position: absolute;top: 20px;right: 10px;}
+.ws-arrow span.two{width: 20px;height: 1px;background-color: #fff;position: absolute;top: 20px;right: 80px;}   
+.ws-arrow span::before{content: '';display: inline-block;width: 10px;height: 1px;background-color: #fff;transform: rotate(45deg);
+    position: absolute;right: -1px;bottom: 3px;}
+.ws-arrow span::after{content: '';display: inline-block;width: 10px;height: 1px;background-color: #fff;transform: rotate(135deg);
+    position: absolute;right: -1px;top: 3px;}
+.ws-link:hover span.one{right:-60px;transition: .5s ease-in-out .1s;}
+.ws-link:hover span.two{right: 10px;transition: .5s ease-in-out .1s;}
 .bold{font-weight: bold; color: #000}
 
 
