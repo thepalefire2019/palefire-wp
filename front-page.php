@@ -193,6 +193,7 @@ get_header();
                   
                   while($blog->have_posts()){
                      $blog->the_post();
+                     $post_url = get_the_permalink();
                      ?>
                           <div class="col-sm-6 col-lg-4">
                            <div class="single_catagory_post post_2">
@@ -202,7 +203,7 @@ get_header();
                               </div>
                               <div class="post_text_1 pr_30">
                                  <h5><span> By <?php echo get_the_author_meta('first_name')." ".get_the_author_meta('last_name'); ?></span> / <?php the_time('d.m.Y'); ?></h5>
-                                 <a href="<?php echo '#' ?>">
+                                 <a href="<?php echo $post_url; ?>">
                                     <h3><?php the_title(); ?></h3>
                                  </a>
                                  <p><?php echo wp_trim_words( get_the_content(),18 ); ?>
