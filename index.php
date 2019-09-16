@@ -1,7 +1,65 @@
 <?php 
  get_header();
+
+ $featured_post = new WP_Query(array(
+                           'tag_slug__in'   => array('English Featured'),
+                           'posts_per_page' => 1
+                         ));
+ if( $featured_post->have_posts() ){
+ 		while( $featured_post->have_posts() ){
+ 			$featured_post->the_post();
+
+
+ 			$f_post_id = get_the_ID();
+ 			$f_title = get_the_title();
+ 			$f_content = get_the_content();
+			$f_postUrl = get_the_permalink();
+			$f_postImg = get_the_post_thumbnail_url($f_post_id, 'pf-large');
+			$f_categories= get_the_category();
+			$f_date = get_the_time('Y-m-d H:i:s');
+
+			if($f_categories){
+				$f_color_id = "category_" . $f_categories[0]->term_id;
+                $f_color = get_option($f_color_id);
+                if($f_color){
+                  $f_bgcolor = $f_color['color'];
+                }else{
+                   $f_bgcolor = '#c8d6e5';
+                }
+            }
  ?>
- 	
+ 	<div class="ws-primary-banner" style="background: url(<?php echo $f_postImg; ?>) center/cover no-repeat fixed ;">
+          <div class="ws-banner-info">
+            <div class="ws-banner-content">
+
+
+            	<div class="row index-cat fea_cat">
+					<div class="col-md-12">
+						<a href="#" style="background:<?php echo $f_bgcolor; ?>;"><?php echo $f_categories[0]->cat_name; ?></a>
+					</div>
+				</div>
+
+              <h1>Weekly Top</h1>
+              <p class="bold"><?php echo $f_title; ?></p>
+              <p><?php echo wp_trim_words( $f_content, 50 )  ?></p>
+            </div>
+            <div class="ws-link">
+              <a href="<?php echo $f_postUrl; ?>" class="ws-discover">
+                <span></span> 
+               	Read More
+              </a>
+              <div class="ws-arrow">
+                <span class="one"></span>
+                <span class="two"></span>
+              </div>
+            </div>  
+          </div>
+        </div>
+       <?php
+       }//while	
+
+	} //if for featured post 
+       ?>
  	
 	<!-- english -->
 		<div class="container">

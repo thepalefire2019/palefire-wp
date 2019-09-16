@@ -35,7 +35,7 @@ function bengali_post_type(){
     'hierarchical'        => false,
     'menu_position'       => null,
     'supports'            => array( 'title', 'editor', 'author', 'thumbnail', 'excerpt', 'comments'),
-    'taxonomies'          => array('bengali_category'),
+    'taxonomies'          => array('bengali_category','post_tag'),
     'show_in_rest'        => true,
     'menu_icon'           => 'dashicons-editor-bold',
     'menu_position'       => 5  

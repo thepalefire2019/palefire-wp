@@ -1,7 +1,49 @@
 <?php 
  get_header();
+
+ 	$featured_bengali = new WP_Query(array(
+                           'post_type' 		=> 'pf_bengali',
+                           'tag_slug__in'   => array('Bengali Featured'),
+                           'posts_per_page' => 1
+                         ));
+ 	if( $featured_bengali->have_posts() ){
+ 		while( $featured_bengali->have_posts() ){
+ 			$featured_bengali->the_post();
+
+ 			$f_beng_post_id = get_the_ID();
+ 			$f_beng_title = get_the_title();
+ 			$f_beng_content = get_the_content();
+			$f_beng_postUrl = get_the_permalink();
+			$f_beng_postImg = get_the_post_thumbnail_url($f_beng_post_id, 'pf-large');
+			$f_beng_category = get_the_terms($f_beng_post_id, 'bengali_category');
+			$f_beng_date = get_the_time('Y-m-d H:i:s');
  ?>
- 	
+ 		<div class="ws-primary-banner" style="background: url(<?php echo $f_beng_postImg; ?>) center/cover no-repeat fixed ;">
+          <div class="ws-banner-info">
+            <div class="ws-banner-content">
+              <h1>Weekly Top</h1>
+              <p class="bold"><?php echo $f_beng_title; ?></p>
+              <p><?php echo wp_trim_words( $f_beng_content, 50 )  ?></p>
+            </div>
+            <div class="ws-link">
+              <a href="<?php echo $f_beng_postUrl; ?>" class="ws-discover">
+                <span></span> 
+                আরো পড়ুন
+              </a>
+              <div class="ws-arrow">
+                <span class="one"></span>
+                <span class="two"></span>
+              </div>
+            </div>  
+          </div>
+        </div>
+    <?php 	
+		}//while	
+
+	} //if for featured post 
+	?>
+
+        <!-- //'tag_slug__in'        => $tags_array, -->
  	
 	
 		<div class="container">
