@@ -69,6 +69,9 @@
   						$beng_postImg = get_the_post_thumbnail_url($beng_post_id, 'pf-medium');
   						$beng_category = get_the_terms($beng_post_id, 'bengali_category');
   						$beng_date = get_the_time('Y-m-d H:i:s');
+
+  						$guest_author_check = get_post_meta( $beng_post_id,"bengali_guest_author_check",true );
+  						$guest_author_name = get_post_meta( $beng_post_id,"bengali_guest_author_name",true );
   						//print_r($beng_category);
 
 				?>
@@ -110,7 +113,16 @@
 						</div>
 						<div class="col-md-8">
 							<p class="content-inside"><?php echo wp_trim_words( $beng_content, 32 ) ?></p><!-- 60 charecter -->
-							<p class="tag"> <a href="<?php echo get_author_posts_url(get_the_author_meta('ID')); ?>" class="index-author"><?php echo get_the_author_meta('first_name')." ".get_the_author_meta('last_name'); ?> </a> | <span class="index-date"><?php echo get_gmt_from_date($beng_date,get_option('date_format').', '.get_option('time_format')) ?></span></p>
+
+
+							<p class="tag"> 
+								<?php if( $guest_author_check == 1 ){ ?>
+								<a href="#" class="index-author">Guest Author </a>
+								<?php }else { 	?>
+								<a href="<?php echo get_author_posts_url(get_the_author_meta('ID')); ?>" class="index-author"><?php echo get_the_author_meta('first_name')." ".get_the_author_meta('last_name'); ?> </a>
+								<?php } ?>
+								 | <span class="index-date"><?php echo get_gmt_from_date($beng_date,get_option('date_format').', '.get_option('time_format')) ?></span>
+								</p>
 						</div>
 					</div>
 

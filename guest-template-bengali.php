@@ -36,6 +36,9 @@ while( have_posts() ){
   	$author_twitter = get_post_meta( $beng_post_id,"author_twitter",true );
   	$author_instagram = get_post_meta( $beng_post_id,"author_instagram",true );
   	$author_youtube = get_post_meta( $beng_post_id,"author_youtube",true );
+
+  	$guest_author_check = get_post_meta( $beng_post_id,"bengali_guest_author_check",true );
+  	$guest_author_name = get_post_meta( $beng_post_id,"bengali_guest_author_name",true );
 	?>
 	
 	<div class="container">
@@ -53,14 +56,21 @@ while( have_posts() ){
 									</div>
 								</div>
 								<h1><?php echo $beng_title; ?></h1>
+
+
+								<?php if( $guest_author_check == 1 ){?>
 									<div class="author-img">
-				                		<a href="<?php echo get_author_posts_url(get_the_author_meta('ID')); ?>">
-					                		<?php echo get_avatar(get_the_author_meta('ID')); ?>
-					              		</a>
+				                		
+					                		<?php //echo get_avatar(get_the_author_meta('ID')); ?>
+					                		<img src="<?php echo get_theme_file_uri('img/guestauthor.png'); ?>">
+					              		
 					             	</div>
 					             	<div class="author-name">
-					             		<h5><?php echo get_the_author_meta('first_name')." ".get_the_author_meta('last_name'); ?> </h5>
+					             		<h5><?php echo $guest_author_name; ?> </h5>
 					             	</div>
+					             <?php } ?>
+
+
 					             	<div class="content-date">
 					             		<p><?php echo get_gmt_from_date($date,get_option('date_format').', '.get_option('time_format')) ?></p>
 					             	</div>
