@@ -61,7 +61,7 @@
                            </li> -->
                            
                            <li class="nav-item dropdown">
-                              <a class="nav-link dropdown-toggle" href="<?php echo site_url('/blog'); ?>">blog</a>
+                              <a class="nav-link dropdown-toggle" href="#">blog</a>
                               <div class="dropdown-menu" aria-labelledby="navbarDropdown">
                                 <a class="dropdown-item" href="<?php echo site_url('/blog'); ?>">English</a>
                                 

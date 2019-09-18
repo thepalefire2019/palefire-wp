@@ -178,7 +178,7 @@ add_filter( 'get_avatar', 'slug_get_avatar', 10, 5 );
 function slug_get_avatar($avatar, $id_or_email, $size, $default, $alt){
   $avatar_url = get_the_author_meta( 'profile_picture', $id_or_email ) ;
   if($avatar_url){
-      $avatar = '<img alt="Author for Palefire" src="'.$avatar_url.'" style="max-width:70px"/>';
+      $avatar = '<img alt="Author for Palefire" src="'.$avatar_url.'" style="max-width:30px"/>';
   }
   return $avatar;
 }
