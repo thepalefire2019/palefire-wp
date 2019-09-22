@@ -1,5 +1,6 @@
 <?php 
  get_header();
+require get_template_directory(). '/palefire-header.php';
 
  	$featured_bengali = new WP_Query(array(
                            'post_type' 		=> 'pf_bengali',

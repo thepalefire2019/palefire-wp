@@ -177,3 +177,104 @@ function save_bengali_guest_author_mbx( $post_id ){
 //  ===========================//post metabox for author social media=====================
 
 
+
+//  ===========================post metabox for bengali film review=====================
+
+add_action("add_meta_boxes", "bengali_film_review");
+function bengali_film_review(){
+  add_meta_box( 
+        'benali-film-review',
+        'Film Review Details',
+        'bengali_film_review_mbx_fn',
+        'pf_bengali',
+        'normal',
+        'high'
+    );
+}
+function bengali_film_review_mbx_fn( $post ){
+  $post_id = $post->ID;
+  $ua = get_post_meta( $post_id,"bengali_ua",true );
+  $production = get_post_meta( $post_id,"bengali_production",true );
+  $director = get_post_meta( $post_id,"bengali_director",true );
+  $release = get_post_meta( $post_id,"bengali_release",true );
+  $cast = get_post_meta( $post_id,"bengali_cast",true );
+  
+
+  ?>
+    <table>
+      <tr>
+        <td>Age :</td>
+        <td><input type="radio" name="ua" value="A" <?php if( $ua == 'A' ){ echo 'checked'; } ?>>A <input type="radio" name="ua" value="U/A" <?php if( $ua == 'U/A' ){ echo 'checked'; } ?>>U/A</td>
+      </tr>
+      <tr>
+        <td>Production House :</td>
+        <td><input type="input" name="production" value="<?php echo $production ?>"></td>
+      </tr>
+      <tr>
+        <td>Director :</td>
+        <td><input type="input" name="director" value="<?php echo $director ?>"></td>
+      </tr>
+      <tr>
+        <td>Cast :</td>
+        <td><input type="input" name="cast" value="<?php echo $cast ?>"></td>
+      </tr>
+      <tr>
+        <td>Rating :</td>
+        <td><input type="date" name="release"></td>
+      </tr>
+
+      
+    </table>
+
+
+  <?php
+
+}
+add_action("save_post","save_bengali_film_review_mbx");
+function save_bengali_film_review_mbx( $post_id ){
+  $ua  = isset( $_REQUEST['ua'])?trim($_REQUEST['ua'] ):"";
+  $production  = isset( $_REQUEST['production'])?trim($_REQUEST['production'] ):"";
+  $director  = isset( $_REQUEST['director'])?trim($_REQUEST['director'] ):"";
+  $release  = isset( $_REQUEST['release'])?trim($_REQUEST['release'] ):"";
+  $cast  = isset( $_REQUEST['cast'])?trim($_REQUEST['cast'] ):"";
+
+
+  if(!empty($ua)){
+    update_post_meta( $post_id,"bengali_ua",$ua );
+  }else{
+    update_post_meta( $post_id,"bengali_ua","0" ); 
+  }
+
+  if(!empty($production)){
+    update_post_meta( $post_id,"bengali_production",$production );
+  }else{
+    update_post_meta( $post_id,"bengali_production","" ); 
+  }
+
+  if(!empty($director)){
+    update_post_meta( $post_id,"bengali_director",$director );
+  }else{
+    update_post_meta( $post_id,"bengali_director","" ); 
+  }
+
+  if(!empty($release)){
+    update_post_meta( $post_id,"bengali_release",$release );
+  }else{
+    update_post_meta( $post_id,"bengali_release","" ); 
+  }
+
+  if(!empty($cast)){
+    update_post_meta( $post_id,"bengali_cast",$cast );
+  }else{
+    update_post_meta( $post_id,"bengali_cast","" ); 
+  }
+
+  
+
+
+
+}
+
+//  ===========================//post metabox for bengali film review=====================
+
+

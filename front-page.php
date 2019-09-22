@@ -1,263 +1,212 @@
 <?php 
-get_header();
+   get_header() ;
+
+   require get_template_directory(). '/palefire-header.php';
 ?>
 
+<!---------------------------------- 1st Navbar--------------------------------->
 
-	<!--BANNER-->
-      <section class="banner_part" style="background-image:url(<?php echo get_theme_file_uri('img/banner_bg_2.jpg'); ?>);">
-         <div class="container">
-            <div class="row align-items-center justify-content-end">
-               <div class="col-lg-5">
-                  <div class="banner_text text-center">
-                     <div class="banner_text_iner">
-                        <!-- <h5>Model Photography</h5>
-                        <h1>Creative <span>Studio</span></h1>
-                        <p>Capturing moments from today</p>
-                        <a href="#" class="btn_1">view work</a> -->
-                     </div>
-                  </div>
-               </div>
+     
+<!---------------------------// 1st Navbar---------------------------------------->
+    
+
+
+<!---------------------------Primary Banner---------------------------------------->
+
+        <div class="ws-primary-banner" style="background: url(<?php echo get_theme_file_uri('img/books1.jpg'); ?>) center/cover no-repeat fixed ;">
+          <div class="ws-banner-info">
+            <div class="ws-banner-content">
+               <h1>Know Us?</h1>
+               <p>
+                  The mighty tales of origin are crazy, right? Overrated, perhaps?
+                  Pale Fire is a well resourced group of friends wanting to change the way websites are made. At Pale Fire, we do not vouch for a sky-high, blood-curling page turner; our history suffices to be quite simple....... 
+               </p>
             </div>
-         </div>
-      </section>
+            <div class="ws-link">
+              <a href="<?php echo site_url('/about-us'); ?>" class="ws-discover">
+                <span></span> 
+                Discover Here
+              </a>
+              <div class="ws-arrow">
+                <span class="one"></span>
+                <span class="two"></span>
+              </div>
+            </div>  
+          </div>
+        </div>
+<!------------------------- // Primary banner---------------------------------->
 
 
 
-      <!--ABOUT US-->
-      <section class="about_us padding_top">
-         <div class="container">
-            <div class="row align-items-center justify-content-center">
-               <div class="col-lg-8">
-                  <div class="about_us_text text-center">
-                     <h5>About Us</h5>
-                     <h2>How we Started
-                     </h2>
-                     <p>
-                     	The mighty tales of origin are crazy, right? Overrated, perhaps?
-						Pale Fire is a well resourced group of friends wanting to change the way websites are made. At
-						Pale Fire, we do not vouch for a sky-high, blood-curling pageturner; our history suffices to be
-						quite simple. The effortless idea seems plain for the first timers who loiter here - 'we dare keep it
-						simple'. We call ourselves artists, for the sole purpose that we at Pale Fire never intend to design, we CREATE.
-                     </p>
-                     <a href="<?php echo site_url('/about-us'); ?>" class="btn_2">read more</a>
-                  </div>
-               </div>
-            </div>
-         </div>
-      </section>
+<!--------------------------- 2nd Navbar----------------------------------------->
+
+    <input id="ws-s-tab1" class="ws-input" type="radio" name="ws-s-navtab" checked="checked">
+    <input id="ws-s-tab2" class="ws-input" type="radio" name="ws-s-navtab">
+    <input id="ws-s-tab3" class="ws-input" type="radio" name="ws-s-navtab">
+    <input id="ws-s-tab4" class="ws-input" type="radio" name="ws-s-navtab">
+     <div class="ws-secondary-navbar">
+        <nav class="ws-s-nav">  
+          <ul class="ws-s-menu">
+            <li class="ws-s-item ws-silver">
+              <span></span>
+              <label for="ws-s-tab1">English</label>
+            </li>
+            <li class="ws-s-item ws-gold">
+              <span></span>
+              <label for="ws-s-tab2">Bengali</label>
+            </li>
+            <!-- <li class="ws-s-item ws-diamond">
+              <span></span>
+              <label for="ws-s-tab3">Diamond</label>
+            </li>
+            <li class="ws-s-item ws-platinum">
+              <span></span>
+              <label for="ws-s-tab4">Platinum</label>
+            </li> -->
+          </ul>
+        </nav>  
+      </div>
+<!---------------------------- // 2nd Navbar--------------------------------->
+
+
+
+<!--------------------------- Content ----------------------------------------->
+
+    <div class="ws-content  ws-grid-content">
+
+      <!---English Content---->
 
       <?php 
-            $all_portfolios = new WP_Query(array(
-                           'post_type' => 'pf_portfolio',
-                           'posts_per_page' => 2
+
+      $blog = new WP_Query(array(
+                     
+                     'posts_per_page' => 4
                            
                          ));
-            if( $all_portfolios->have_posts() ){
+
+      while ( $blog->have_posts() ) {
+         $blog->the_post();
+         $post_url = get_the_permalink(); 
+         $post_id = get_the_ID();
+         $featured_img = get_the_post_thumbnail_url($post_id,'pf-regular'); 
+         $post_title = get_the_title();
+         $port_content = get_the_content();
+         $categories= get_the_category();
+         if($categories){
+            $color_id = "category_" . $categories[0]->term_id;
+             $color = get_option($color_id);
+             if($color){
+               $bgcolor = $color['color'];
+             }else{
+                $bgcolor = '#c8d6e5';
+             }
+         }
       ?>
-      <!--PORTFOLIO-->
-      <section class="gallery_part section_padding">
-         <div class="container-fluid">
-            <div class="row">
-               <div class="col-lg-5 offset-lg-2">
-                  <div class="section_tittle">
-                     <p>recent project</p>
-                     <h2>Check latest work</h2>
+
+      <div class="ws-con-s2 ws-content1 ws-col-con ws-col-1">
+         <div class="ws-con-card">
+         <div class="ws-con-img" style="background: url(<?php echo $featured_img; ?>) center/cover no-repeat  ;"></div>
+            <div class="ws-card-container">
+               <div class="ws-card-info">
+                  <!-- <p><b>By</b></p> -->
+                  <div class="row index-cat-front">
+                     <div class="col-md-12">
+                        <a href="#" style="background:<?php echo $bgcolor; ?>;"><?php echo $categories[0]->cat_name; ?></a>
+                     </div>
                   </div>
+                  <h4><b><?php echo get_the_author_meta('first_name')." ".get_the_author_meta('last_name'); ?></b></h4> 
+                  <p><?php echo $post_title ?></p>
                </div>
-            </div>
-            
-            <div class="container">
-               
-               <div class="row">
-                  <!-- loop starts here -->
-                      <?php 
-                        while( $all_portfolios->have_posts() ){
-                           $all_portfolios->the_post();
-                           $post_id = get_the_ID();
-                           $post_url = get_the_permalink();
-                           $get_img = get_the_post_thumbnail_url($post_id, 'pf-portrait');
-                           $port_title = get_the_title();
-                           $port_content = get_the_content();
-                       
-                      ?>
+               <div class="ws-link">
+                  <a href="<?php echo $post_url ?>" class="ws-discover">
+                  <span></span> 
+                  Read More
+                  </a>
 
-                  <div class="col-md-6 col-xs-12">
-                     <a href="<?php echo $post_url; ?>">
-                        <div class="front-port img-fluid" >
-                           <img src="<?php echo $get_img; ?>">
-                           <div class="front-port-shade">
-                              <h2><?php echo $port_title; ?></h2>
-                              <p> <?php echo wp_trim_words( $port_content, 15 ) ?></p>
-                           </div> 
-                        </div>
-                     </a>
+                  <div class="ws-arrow">
+                     <span class="one"></span>
+                     <span class="two"></span>
                   </div>
-                  <?php 
-                      }
-                        wp_reset_postdata();
-                  ?>
-
-                 <!--  <div class="col-md-6 col-xs-12">
-                     <a href="#">
-                        <div class="front-port img-fluid" >
-                           <img src="<?php echo get_theme_file_uri('img/banner_bg.jpg'); ?>">
-                           <div class="front-port-shade">
-                              <h2>ICOBUS</h2>
-                              <p>Here will lie the desc Here will lie the desc Here will lie the desc Here will lie the desc</p>
-                           </div> 
-                        </div>
-                     </a>
-                  </div> -->
-               </div>   
-               <div class="row portfolio-btn">
-                  <div class="col-md-4"></div>
-                  
-                  <div class="col-md-4 portfolio-btn">
-                     <a href="<?php echo site_url('/portfolios'); ?>" class="btn_2">read more</a>
-                  </div>
-                  <div class="col-md-4"></div>
-               </div>    
+               </div>  
             </div>
-
          </div>
-      </section>
-
-      <!-- portfolio -->
+      </div>
    <?php } ?>
 
-      <!--TESTIMONIALS-->
-      <!-- <section class="review_part">
-         <div class="container">
-            <div class="row align-items-center justify-content-between">
-               <div class="col-md-5">
-                  <div class="review_img">
-                     <img src=" <?php echo get_theme_file_uri('img/review_bg.png'); ?> " alt="">
-                  </div>
-               </div>
-               <div class="col-md-6">
-                  <h5>Testimnonials</h5>
-                     
-                  <div class="review_slider owl-carousel">
-                     <div class="review_part_text">
-                        
-                        <h2>Title
-                        </h2>
-                        <p>Boht Hard Boht Hard
-                        </p>
-                        <h3>Priya, <span>Android Developer</span> </h3>
-                     </div>
-                     <div class="review_part_text">
-                        <h2>Title
-                        </h2>
-                        <p>Mandir yahi banega...
-                        </p>
-                        <h3>Sakir, <span>Web Developer</span> </h3>
-                     </div>
-                     <div class="review_part_text">
-                        <h2>Title
-                        </h2>
-                        <p>Chup MotherBoard
-                        </p>
-                        <h3>Saikat, <span>Web Developer</span> </h3>
-                     </div>
-                  </div>
-               </div>
-            </div>
-         </div>
-      </section> -->
-      <!--TESTIMONIALS-->
+    <!---//English Content---->  
 
 
-       <!--BLOG-->
-       <?php
-            $blog = new WP_Query(array(
-                           'posts_per_page' => 3
-                           
-                         ));
-            if( $blog->have_posts() ){
-        ?>
-      <section class="catagory_post padding_bottom">
-         <div class="container">
-            <div class="row">
-               <div class="col-xl-4">
-                  <div class="section_tittle">
-                     <p>our blog</p>
-                     <h2>Latest story</h2>
-                  </div>
-               </div>
-            </div>
-            <div class="row">
-
-            	<!-- loop start -->
-               <?php
-                  
-                  while($blog->have_posts()){
-                     $blog->the_post();
-                     $post_url = get_the_permalink();
-                     ?>
-                          <div class="col-sm-6 col-lg-4">
-                           <div class="single_catagory_post post_2">
-                              <div class="category_post_img">
-                                 <!-- <img src="" alt="image">   -->
-                                 <?php the_post_thumbnail('pf-small'); ?> 
-                              </div>
-                              <div class="post_text_1 pr_30">
-                                 <h5><span> By <?php echo get_the_author_meta('first_name')." ".get_the_author_meta('last_name'); ?></span> / <?php the_time('d.m.Y'); ?></h5>
-                                 <a href="<?php echo $post_url; ?>">
-                                    <h3><?php the_title(); ?></h3>
-                                 </a>
-                                 <p><?php echo wp_trim_words( get_the_content(),18 ); ?>
-                                 </p>
-                              </div>
-                           </div>
-                        </div>
-
-                     <?php
-                  }
-                  wp_reset_postdata();
-                ?>
-             
-               <!-- loop end -->
-               
-              <!--  <div class="col-sm-6 col-lg-4">
-                  <div class="single_catagory_post post_2">
-                     <div class="category_post_img">
-                        <img src="img/blog/blog_2.png" alt="image">
-                     </div>
-                     <div class="post_text_1 pr_30">
-                        <h5><span> By Name</span> / date</h5>
-                        <a href="blog.html">
-                           <h3>title</h3>
-                        </a>
-                        <p>Content 
-                        </p>
-                     </div>
-                  </div>
-               </div>
-               <div class="col-sm-6 col-lg-4">
-                  <div class="single_catagory_post post_2">
-                     <div class="category_post_img">
-                        <img src="img/blog/blog_3.png" alt="image">
-                     </div>
-                     <div class="post_text_1 pr_30">
-                        <h5><span> By Name</span> / date</h5>
-                        <a href="blog.html">
-                           <h3>Title</h3>
-                        </a>
-                        <p>Content 
-                        </p>
-                     </div>
-                  </div>
-               </div> -->
 
 
-            </div>
-         </div>
-      </section>
+
+
+
+      <!-----Bengali Content------>
+      <div class="ws-con-g1 ws-content2 ws-col-con ws-col-1">
       <?php
-            }
+         $all_bengali = new WP_Query(array(
+                           'post_type' => 'pf_bengali',
+                           'posts_per_page' => 2
+                         ));
+
+         while( $all_bengali->have_posts() ){
+            $all_bengali->the_post();
+            $beng_post_id  = get_the_ID();
+            $beng_title    = get_the_title();
+            $beng_content  = get_the_content();
+            $beng_postUrl  = get_the_permalink();
+            $beng_postImg  = get_the_post_thumbnail_url($beng_post_id, 'pf-regular');
+            $beng_category = get_the_terms($beng_post_id, 'bengali_category');
+            $beng_date     = get_the_time('Y-m-d H:i:s');
+         
+
        ?>
 
+       
+          <div class="ws-con-card">
+            <div class="ws-con-img" style="background: url(<?php echo $beng_postImg; ?>) center/cover no-repeat  ;"></div>
+            <div class="ws-card-container">
+              <div class="ws-card-info">
+                <h4><b><?php echo $beng_title; ?></b></h4> 
+                <p><?php echo wp_trim_words( $beng_content, 50 )  ?></p>
+              </div>
+              <div class="ws-link">
+              <a href="#" class="ws-discover">
+                <span></span> 
+                আরো পড়ুন
+              </a>
+              <div class="ws-arrow">
+                <span class="one"></span>
+                <span class="two"></span>
+              </div>
+            </div>  
+            </div>
+          </div>
+
+         
+       <?php } ?>
+        </div>
+
+       
+     
+
+        
+       
+      <!---//Gold Content---->  
+
+      
+
+        
+    </div> 
+
+  <!----------- // ws-content-------------------->
+   
+    
+
+
+ 
+     
+      
 
 
 
@@ -265,5 +214,26 @@ get_header();
 
 
 
-<?php
+
+
+
+
+
+
+
+
+
+
+<!------------------------ Footer ----------------------------------->
+
+<?php 
+
+
+require get_template_directory(). '/palefire-footer.php';
 get_footer();
+
+
+
+
+
+

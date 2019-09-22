@@ -6,6 +6,10 @@ version:1.0
 */
 
 @import "https://fonts.googleapis.com/css?family=Oswald:400,500,600,700|Roboto:400,500,700&amp;display=swap";
+@font-face {font-family: 'sans-less'; src: url('fonts/LessSans/Less.otf'); font-weight: 300;}
+@font-face {font-family: 'sans-less'; src: url('fonts/LessSans/Less-Bold.otf'); font-weight: 400;}
+@font-face {font-family: 'sans-less'; src: url('fonts/LessSans/Less-Light.otf'); font-weight: 500;}
+
 body{
     font-family:roboto,sans-serif;
     padding:0;
@@ -4754,6 +4758,8 @@ h1,h2,h3,h4,h5,h6{
 
 
 
+
+
 /** Sarasij **/
 header{
     box-shadow: 2px 2px 5px 1px rgba(0,0,0,0.2);
@@ -4841,6 +4847,15 @@ header{
     padding: 5px 8px; margin: 0; width: fit-content; font-size: 13px; font-weight: 500; color: #000;
 }
 .index-cat a:hover{
+    text-decoration: none; color: #000000;
+}
+.index-cat-front{
+    padding:0 0 5px 0;
+}
+.index-cat-front a{
+    padding: 5px 8px; margin: 0; width: fit-content; font-size: 13px; font-weight: 500; color: #000;
+}
+.index-cat-front a:hover{
     text-decoration: none; color: #000000;
 }
 
@@ -5009,15 +5024,15 @@ header{
 .choose-content-parent{margin-top: 150px;}
 .mobile-about{display: none;}
 .fea_cat{margin-bottom: 20px;}
-:root{ --main-color: #000;font-size: 10px;}
+:root{ --main-color-black: #000;font-size: 10px;}
 .ws-primary-banner{position: relative;height:80vh ;width: 100%;top: 10vh;margin-bottom: 10vh;z-index: 8;
     display: flex;align-items: center;}
 .ws-banner-info{background: rgba(252,252,251,0.8);width: 70%;position: relative;}
 .ws-banner-content{padding: 60px;width:100%;height: 80%;overflow: hidden;}
 .ws-banner-content h1{font-size: 6rem;padding-bottom: 3rem;margin-bottom: 2rem;line-height: 4rem;
-    border-bottom: 2px solid var(--main-color);width: fit-content;}
+    border-bottom: 2px solid var(--main-color-black);width: fit-content;}
 .ws-banner-content p{font-size: 2rem;padding-top: 1rem;text-align: justify;}
-.ws-link{position: absolute;bottom:0;right: 0;width: 180px;height: 40px;background-color: var(--main-color);
+.ws-link{position: absolute;bottom:0;right: 0;width: 180px;height: 40px;background-color: var(--main-color-black);
     overflow: hidden;}           
 .ws-discover{float: left;padding: 8px;width:80%;height: 100%;overflow: hidden;}
 .ws-link a{font-size: 1.7rem;color: #FFFFFF;text-decoration: none;font-family: "Gotham SSm A","Gotham SSm B";font-weight: 500;font-style: normal;
@@ -5076,3 +5091,8 @@ header{
 
 
 /** end sarasij **/
+
+
+
+
+
