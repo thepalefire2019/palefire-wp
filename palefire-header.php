@@ -16,7 +16,7 @@
          <li class="ws-p-item">
           <a class="ws-p-link second" href="#">Blog</a>
           <ul class="drop">
-            <li class="dropdown">
+            <li class="custom-dropdown">
               <a href="<?php echo site_url('/blog'); ?>">English</a>
               <a href="<?php echo site_url('/bengali'); ?>">Bengali</a>
               

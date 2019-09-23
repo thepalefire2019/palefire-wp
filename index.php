@@ -1,6 +1,6 @@
 <?php 
  get_header();
-
+ require get_template_directory(). '/palefire-header.php';
  $featured_post = new WP_Query(array(
                            'tag_slug__in'   => array('English Featured'),
                            'posts_per_page' => 1
@@ -204,5 +204,5 @@
 
 
  	<?php
- 
+ require get_template_directory(). '/palefire-footer.php';
  get_footer();

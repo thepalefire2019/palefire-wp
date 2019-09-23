@@ -209,5 +209,5 @@ require get_template_directory(). '/palefire-header.php';
 
 
  	<?php
- 
+ require get_template_directory(). '/palefire-footer.php';
  get_footer();

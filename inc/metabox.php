@@ -198,6 +198,8 @@ function bengali_film_review_mbx_fn( $post ){
   $director = get_post_meta( $post_id,"bengali_director",true );
   $release = get_post_meta( $post_id,"bengali_release",true );
   $cast = get_post_meta( $post_id,"bengali_cast",true );
+  $rating = get_post_meta( $post_id,"bengali_rating",true );
+  $time = get_post_meta( $post_id,"bengali_time",true );
   
 
   ?>
@@ -219,8 +221,16 @@ function bengali_film_review_mbx_fn( $post ){
         <td><input type="input" name="cast" value="<?php echo $cast ?>"></td>
       </tr>
       <tr>
-        <td>Rating :</td>
-        <td><input type="date" name="release"></td>
+        <td>Release Date :</td>
+        <td><input type="date" name="release" value="<?php echo $release ?>"></td>
+      </tr>
+      <tr>
+        <td>Rating:</td>
+        <td><input type="text" name="rating" value="<?php echo $rating ?>"> /5</td>
+      </tr>
+      <tr>
+        <td>Total Timing:</td>
+        <td><input type="text" name="time" value="<?php echo $time ?>"></td>
       </tr>
 
       
@@ -237,6 +247,8 @@ function save_bengali_film_review_mbx( $post_id ){
   $director  = isset( $_REQUEST['director'])?trim($_REQUEST['director'] ):"";
   $release  = isset( $_REQUEST['release'])?trim($_REQUEST['release'] ):"";
   $cast  = isset( $_REQUEST['cast'])?trim($_REQUEST['cast'] ):"";
+  $rating  = isset( $_REQUEST['rating'])?trim($_REQUEST['rating'] ):"";
+  $time  = isset( $_REQUEST['time'])?trim($_REQUEST['time'] ):"";
 
 
   if(!empty($ua)){
@@ -267,6 +279,18 @@ function save_bengali_film_review_mbx( $post_id ){
     update_post_meta( $post_id,"bengali_cast",$cast );
   }else{
     update_post_meta( $post_id,"bengali_cast","" ); 
+  }
+
+  if(!empty($rating)){
+    update_post_meta( $post_id,"bengali_rating",$rating );
+  }else{
+    update_post_meta( $post_id,"bengali_rating","" ); 
+  }
+
+  if(!empty($time)){
+    update_post_meta( $post_id,"bengali_time",$time );
+  }else{
+    update_post_meta( $post_id,"bengali_time","" ); 
   }
 
   

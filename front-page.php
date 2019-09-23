@@ -13,7 +13,7 @@
 
 <!---------------------------Primary Banner---------------------------------------->
 
-        <div class="ws-primary-banner" style="background: url(<?php echo get_theme_file_uri('img/books1.jpg'); ?>) center/cover no-repeat fixed ;">
+        <div class="ws-primary-banner" style="background: url(<?php echo get_theme_file_uri('img/books.jpg'); ?>) center/cover no-repeat fixed ;">
           <div class="ws-banner-info">
             <div class="ws-banner-content">
                <h1>Know Us?</h1>
@@ -171,7 +171,7 @@
                 <p><?php echo wp_trim_words( $beng_content, 50 )  ?></p>
               </div>
               <div class="ws-link">
-              <a href="#" class="ws-discover">
+              <a href="<?php echo $beng_postUrl; ?>" class="ws-discover">
                 <span></span> 
                 আরো পড়ুন
               </a>

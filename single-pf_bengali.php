@@ -1,5 +1,6 @@
 <?php
 get_header();
+require get_template_directory(). '/palefire-header.php';
 while( have_posts() ){
 	the_post();
 	$beng_post_id = get_the_ID();
@@ -266,5 +267,5 @@ while( have_posts() ){
 
 	<?php
 }
-
+require get_template_directory(). '/palefire-footer.php';
 get_footer();

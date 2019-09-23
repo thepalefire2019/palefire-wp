@@ -4,6 +4,7 @@
 	Template Post Type: pf_bengali
 	*/
 	get_header();
+	require get_template_directory(). '/palefire-header.php';
 ?>
 
 <?php
@@ -45,6 +46,8 @@ while( have_posts() ){
   $director = get_post_meta( $beng_post_id,"bengali_director",true );
   $release = get_post_meta( $beng_post_id,"bengali_release",true );
   $cast = get_post_meta( $beng_post_id,"bengali_cast",true );
+  $rating = get_post_meta( $beng_post_id,"bengali_rating",true );
+  $time = get_post_meta( $beng_post_id,"bengali_time",true );
 	?>
 	
 	<div class="container">
@@ -74,14 +77,25 @@ while( have_posts() ){
 					             		<p><?php echo get_gmt_from_date($date,get_option('date_format').', '.get_option('time_format')) ?></p>
 					             	</div>
 					             	<div class="clearfix"></div>
+					             	
+
 							</div>
 						</div>
 				</div>
 			</div>
-
+			<div class="container">
+			<div class="phone-film">
+         		<p class="text-left"><span class="bold">বয়েস সীমা   : </span> <?php echo $ua ; ?> </p>
+				<p class="text-left"><span class="bold"> রেটিং : </span> <?php echo $rating; ?>/5 </p>
+				<p class="text-left"><span class="bold">পরিচালক : </span> <?php echo $director; ?> </p>
+				<p class="text-left"><span class="bold">প্রযোজনা  : </span> <?php echo $production; ?> </p>
+				<p class="text-left"><span class="bold">অভিনেতা  : </span> <?php echo $cast; ?> </p>
+				<p class="text-left"><span class="bold">সময় সীমা  : </span> <?php echo $time; ?> </p>
+         	</div>
+         	</div>
 			<div class="row content-area">
 				<div class="col-md-12">
-					<div class="content-p" >
+					<div class="content-p-film" >
 					<p><?php echo $beng_content;  ?></p>
 				</div>
 				</div>
@@ -97,128 +111,37 @@ while( have_posts() ){
 		<!-- left-container-single -->
 		<div class="right-container-single">
 			<!-- starts if -->
-			<?php if( $social_add == 1 ){ ?>
-			<div class="row ">
-					<div class="col-md-12 ml-auto mr-auto">
-						<h4 class="right-head">
-							<span>Follow <?php echo get_the_author_meta('first_name') ?> On</span>
-						</h4>
-					</div>	
-				</div>
-				<div class="row">
-					<div class="col-md-12 ml-auto mr-auto">
-						<h4 class="right-head">
-							<span></span>
-						</h4>
-					</div>	
-				</div>
-
-				<?php if( $author_facebook == 1 ){ ?>
-
-				<a href="<?php echo $author_facebook_url; ?>" class="right-content-box">
-					<div class="row ">
-						<div class="col-md-4">
-							<img class="img-fluid" src="<?php echo get_theme_file_uri('img/fb2.png'); ?>">
-						</div>
-						<div class="col-md-8">
-							<p><span class="side-portfolio-title">Click Here!</span>: <br>Follow my work on Facebook. </p>
-						</div>
-						
-					</div>
-				</a>
-
-				<?php }
-						if( $author_twitter == 1 ){
-				 ?>
-
-				 <a href="<?php echo $author_twitter_url; ?>" class="right-content-box">
-					<div class="row ">
-						<div class="col-md-4">
-							<img class="img-fluid" src="<?php echo get_theme_file_uri('img/twit.png'); ?>">
-						</div>
-						<div class="col-md-8">
-							<p><span class="side-portfolio-title">Click Here!</span>: <br>Folow my work on Twitter. </p>
-						</div>
-						
-					</div>
-				</a>
-
-				<?php } 
-						if( $author_instagram == 1 ){
-				?>
-				<a href="<?php echo $author_instagram_url; ?>" class="right-content-box">
-					<div class="row ">
-						<div class="col-md-4">
-							<img class="img-fluid" src="<?php echo get_theme_file_uri('img/insta.png'); ?>">
-						</div>
-						<div class="col-md-8">
-							<p><span class="side-portfolio-title">Click Here!</span>: <br>Folow my work on Instagram. </p>
-						</div>
-						
-					</div>
-				</a>
-
-				<?php } 
-						if( $author_youtube == 1 ){
-				?>
-				<a href="<?php echo $author_youtube_url; ?>" class="right-content-box">
-					<div class="row ">
-						<div class="col-md-4">
-							<img class="img-fluid" src="<?php echo get_theme_file_uri('img/youtube.png'); ?>">
-						</div>
-						<div class="col-md-8">
-							<p><span class="side-portfolio-title">Click Here!</span>: <br>Follow my channel in Youtube. </p>
-						</div>
-						
-					</div>
-				</a>
-			<?php } ?>
-				<?php }else{ 
-						 $all_services = new WP_Query(array(
-                           'post_type' => 'pf_portfolio',
-                           'posts_per_page' => 6
-                           
-                         ));
-
-					?>
+			
 				<!-- ends if ....starts else -->
 				<div class="row ">
 					<div class="col-md-12 ml-auto mr-auto">
 						<h4 class="right-head">
-							<span>Our Works</span>
+							<span>মুভি রিভিউ</span>
 						</h4>
 					</div>	
 				</div>
 				<div class="row">
 					<div class="col-md-12 ml-auto mr-auto">
 						<h4 class="right-head">
-							<span></span>
+							<span><?php echo $beng_title; ?></span>
 						</h4>
 					</div>	
 				</div>
-				<?php while( $all_services->have_posts() ){ 
-						$all_services->the_post();
-						$services_id = get_the_ID();
-						$services_name = get_the_title();
-						$services_content = get_the_content();
- 						$servicesUrl = get_the_permalink();
-  						$servicesImg = get_the_post_thumbnail_url($services_id, 'pf-small');
-				?>
-				<a href="<?php echo $servicesUrl ; ?>" class="right-content-box">
+				
+				<div class="right-content-box" style="border:1px solid #000">
 					<div class="row ">
-						<div class="col-md-4">
-							<img class="img-fluid" src="<?php echo $servicesImg; ?>">
-						</div>
-						<div class="col-md-8">
-							<p><span class="side-portfolio-title"><?php echo $services_name; ?></span>: <?php  echo wp_trim_words( $services_content, 10 ) ;?> </p>
-						</div>
+					<div class="col-md-12">
+						<p class="text-center"><span class="bold">বয়েস সীমা   : </span> <?php echo $ua ; ?> </p>
+						<p class="text-center"><span class="bold"> রেটিং : </span> <?php echo $rating; ?>/5 </p>
+						<p class="text-center"><span class="bold">পরিচালক : </span> <?php echo $director; ?> </p>
+						<p class="text-center"><span class="bold">প্রযোজনা  : </span> <?php echo $production; ?> </p>
+						<p class="text-center"><span class="bold">অভিনেতা  : </span> <?php echo $cast; ?> </p>
+						<p class="text-center"><span class="bold">সময় সীমা  : </span> <?php echo $time; ?> </p>
+					</div>
 						
 					</div>
-				</a>
-				<?php
-					}//while loop
-					wp_reset_postdata();
-				 } //else?>
+				</div>
+				
 				<!-- end else -->
 
 

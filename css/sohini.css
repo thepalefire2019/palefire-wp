@@ -107,7 +107,7 @@ body{
 .ws-p-link:hover{
 
             text-decoration: none;
-            color: var(--main-color);
+            color: #000000;
             font-weight: 600;
 }
  
@@ -920,7 +920,7 @@ input.ws-input{
     width: 100%; height:860px;
 }*/
 .ft-background{background: url(image/footer.jpg) no-repeat center  ;width: 100%; height:800px; position: relative;}
-.footer{position: absolute; width: 100%; height:800px; background-image: linear-gradient(rgba(255,255,255,0.2),rgba(0,0,0,1));}
+.footer{position: absolute; width: 100%; height:800px; background-image: linear-gradient(rgba(0,0,0,0.2),rgba(0,0,0,1));}
 .ft-logo{width: 200px; height: 200px; margin: 0 auto; padding-top: 50px;}
 .ft-logo img{width: 200px; height: 200px; text-align: center;}
 .ft-head{width: fit-content; height: 150px; margin: 0 auto; padding-top: 10px; text-align: center;}
@@ -936,36 +936,18 @@ input.ws-input{
 .ft-contact h2{ font-size: 20px; color: #fff; font-weight: 200; text-transform: uppercase; font-family: sans-less; }
 .ft-contact p{font-family: sans-less;}
 .ft-contact-mobile{display: none;}
-ul.drop{ 
-    display: none;
-    list-style: none;
-}
+.ft-subscribe{text-transform: uppercase; background: transparent; color:#fff; border: 2px solid #fff; width: fit-content;
+                 padding: 4px 9px; margin-left: 46%; border-radius: 3px;}
 
-.ws-p-item:hover ul.drop{
 
-    display: block;
-}
 
-li.dropdown{
-     position: absolute;
-     background-color: #fff;
-     width: 100px;
-     box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-}
 
-.dropdown a{
-      display: block;
-      color: var(--main-color);
-      padding: 12px 16px;
-      text-decoration: none;
-      text-align: left;
-      font-size: 18px;
-}
-.dropdown a:hover {
-    background-color: var(--main-color);
-    color: #fff;
-    text-decoration: none;
-}
+
+ul.drop{ display: none;list-style: none;}
+.ws-p-item:hover ul.drop{display: block;}
+li.custom-dropdown{position: absolute;background-color: #fff;width: 100px;box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);}
+.custom-dropdown a{ display: block;color: var(--main-color);padding: 12px 16px;text-decoration: none;text-align: left;font-size: 18px;}
+.custom-dropdown a:hover {background-color: var(--main-color);color: #fff;text-decoration: none;}
 
 /* //footer  */
 
@@ -980,8 +962,8 @@ li.dropdown{
     .ft-para p{font-size:20px ; color:#ffffff; line-height: 25px;}
     .ft-social{margin:10px 0 0 10%;}
     ul.drop{display: none;}
-
-li.dropdown{position:unset;background-color: #fff;width: 100%;box-shadow: unset;}
+    li.dropdown{position:unset;background-color: #fff;width: 100%;box-shadow: unset;}
+    .ft-subscribe{margin-left: 36%; margin-bottom: 15px;}
 
 }   
 

@@ -1,4 +1,4 @@
-<footer class="ft-background" style="background: url(<?php echo get_theme_file_uri('img/footer.jpg'); ?>) center/cover no-repeat fixed ;">
+<footer class="ft-background" style="background: url(<?php echo get_theme_file_uri('img/footer1.jpg'); ?>) center/cover no-repeat fixed ;">
   <div class="footer">
     <div class="container">
 
@@ -20,6 +20,13 @@
           <p>The Platform is for any enthusiastic bloggres. The website presents the community of people who enjoy reading and writing. Happy Blogging </p>
         </div>
       </div>
+      <div class="row">
+
+        <div class="col-md-12">
+          <a href="#"><p class="text-right ft-subscribe" >Subscribe</p></a>
+        </div>
+      </div>
+      
 
       <div class="row ft-social justify-content-center">
 
@@ -27,8 +34,8 @@
 
         <div class="col-md-2 col-8">
           <ul>
-            <li class="ft-facebook"><a href="#"><img src="<?php echo get_theme_file_uri('img/facebook.png'); ?>"></a></li>
-            <li class="ft-twitter"><a href="#"><img src="<?php echo get_theme_file_uri('img/twitter.png'); ?>"></a></li>
+            <li class="ft-facebook"><a href="https://www.facebook.com/thepalefire"><img src="<?php echo get_theme_file_uri('img/facebook.png'); ?>"></a></li>
+            <li class="ft-twitter"><a href="https://twitter.com/Palefire16"><img src="<?php echo get_theme_file_uri('img/twitter.png'); ?>"></a></li>
             <li class="ft-insta"><a href="#"><img src="<?php echo get_theme_file_uri('img/instagram.png'); ?>"></a></li>
           </ul>
         </div>
