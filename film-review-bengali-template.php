@@ -137,7 +137,7 @@ while( have_posts() ){
 				<div class="row">
 					<div class="col-md-12 ml-auto mr-auto">
 						<h4 class="right-head">
-							<span><?php echo $beng_title; ?></span>
+							<span></span>
 						</h4>
 					</div>	
 				</div>
@@ -193,7 +193,7 @@ while( have_posts() ){
 		?>
 		
 				<div class="col-md-4 col-12 ">
-					<a href="#">
+					<a href="<?php echo $author_postUrl  ?>">
 						<div class="author-post-box">
 							<img src="<?php echo $author_postImg  ?>" class="img-fluid">
 							<div class="author-post-box-shade">
