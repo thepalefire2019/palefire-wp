@@ -13,7 +13,7 @@
 
 <!---------------------------Primary Banner---------------------------------------->
 
-        <div class="ws-primary-banner" style="background: url(<?php echo get_theme_file_uri('img/books.jpg'); ?>) center/cover no-repeat fixed ;">
+        <div class="ws-primary-banner" style="background: url(<?php echo get_theme_file_uri('img/front-banner.jpg'); ?>) center/cover no-repeat fixed ;">
           <div class="ws-banner-info">
             <div class="ws-banner-content">
                <h1>Know Us?</h1>
