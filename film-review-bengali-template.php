@@ -128,7 +128,7 @@ while( have_posts() ){
 					</div>	
 				</div>
 				
-				<div class="right-content-box" style="border:1px solid #000">
+				<div class="right-content-box" style="border:1px solid #000; padding:4px 8px;">
 					<div class="row ">
 					<div class="col-md-12">
 						<p class="text-left"><span class="bold">বয়স সীমা   : </span> <?php echo $ua ; ?> </p>
