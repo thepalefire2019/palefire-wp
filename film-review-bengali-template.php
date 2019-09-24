@@ -85,8 +85,8 @@ while( have_posts() ){
 			</div>
 			<div class="container">
 			<div class="phone-film">
-         		<p class="text-left"><span class="bold">বয়েস সীমা   : </span> <?php echo $ua ; ?> </p>
-				<p class="text-left"><span class="bold"> রেটিং : </span> <?php echo $rating; ?>/5 </p>
+         		<p class="text-left"><span class="bold">বয়স সীমা   : </span> <?php echo $ua ; ?> </p>
+				<p class="text-left"><span class="bold"> রেটিং : </span> <?php echo $rating; ?>/৫  </p>
 				<p class="text-left"><span class="bold">পরিচালক : </span> <?php echo $director; ?> </p>
 				<p class="text-left"><span class="bold">প্রযোজনা  : </span> <?php echo $production; ?> </p>
 				<p class="text-left"><span class="bold">অভিনেতা  : </span> <?php echo $cast; ?> </p>
@@ -131,12 +131,12 @@ while( have_posts() ){
 				<div class="right-content-box" style="border:1px solid #000">
 					<div class="row ">
 					<div class="col-md-12">
-						<p class="text-center"><span class="bold">বয়েস সীমা   : </span> <?php echo $ua ; ?> </p>
-						<p class="text-center"><span class="bold"> রেটিং : </span> <?php echo $rating; ?>/5 </p>
-						<p class="text-center"><span class="bold">পরিচালক : </span> <?php echo $director; ?> </p>
-						<p class="text-center"><span class="bold">প্রযোজনা  : </span> <?php echo $production; ?> </p>
-						<p class="text-center"><span class="bold">অভিনেতা  : </span> <?php echo $cast; ?> </p>
-						<p class="text-center"><span class="bold">সময় সীমা  : </span> <?php echo $time; ?> </p>
+						<p class="text-left"><span class="bold">বয়স সীমা   : </span> <?php echo $ua ; ?> </p>
+						<p class="text-left"><span class="bold"> রেটিং : </span> <?php echo $rating; ?>/৫ </p>
+						<p class="text-left"><span class="bold">পরিচালক : </span> <?php echo $director; ?> </p>
+						<p class="text-left"><span class="bold">প্রযোজনা  : </span> <?php echo $production; ?> </p>
+						<p class="text-left"><span class="bold">অভিনেতা  : </span> <?php echo $cast; ?> </p>
+						<p class="text-left"><span class="bold">সময় সীমা  : </span> <?php echo $time; ?> </p>
 					</div>
 						
 					</div>
