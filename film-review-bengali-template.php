@@ -42,12 +42,25 @@ while( have_posts() ){
 
 
   $ua = get_post_meta( $beng_post_id,"bengali_ua",true );
+  echo $check_ua = get_post_meta( $beng_post_id,"bengali_check_ua",true );
+
   $production = get_post_meta( $beng_post_id,"bengali_production",true );
+  $check_production = get_post_meta( $beng_post_id,"bengali_check_production",true );
+
   $director = get_post_meta( $beng_post_id,"bengali_director",true );
+  $check_director = get_post_meta( $beng_post_id,"bengali_check_director",true );
+
   $release = get_post_meta( $beng_post_id,"bengali_release",true );
+  $check_release = get_post_meta( $beng_post_id,"bengali_check_release",true );
+
   $cast = get_post_meta( $beng_post_id,"bengali_cast",true );
+  $check_cast = get_post_meta( $beng_post_id,"bengali_check_cast",true );
+
   $rating = get_post_meta( $beng_post_id,"bengali_rating",true );
+  $check_rating = get_post_meta( $beng_post_id,"bengali_check_rating",true );
+
   $time = get_post_meta( $beng_post_id,"bengali_time",true );
+  $check_time = get_post_meta( $beng_post_id,"bengali_check_time",true );
 	?>
 	
 	<div class="container">
@@ -85,12 +98,13 @@ while( have_posts() ){
 			</div>
 			<div class="container">
 			<div class="phone-film">
-         		<p class="text-left"><span class="bold">বয়স সীমা   : </span> <?php echo $ua ; ?> </p>
-				<p class="text-left"><span class="bold"> রেটিং : </span> <?php echo $rating; ?>/৫  </p>
-				<p class="text-left"><span class="bold">পরিচালক : </span> <?php echo $director; ?> </p>
-				<p class="text-left"><span class="bold">প্রযোজনা  : </span> <?php echo $production; ?> </p>
-				<p class="text-left"><span class="bold">অভিনেতা  : </span> <?php echo $cast; ?> </p>
-				<p class="text-left"><span class="bold">সময় সীমা  : </span> <?php echo $time; ?> </p>
+
+         		<?php if( $check_ua==1 ){ ?><p class="text-left"><span class="bold">বয়স সীমা   : </span> <?php echo $ua ; ?> </p> <?php } ?>
+				<?php if( $check_rating==1 ){ ?><p class="text-left"><span class="bold"> রেটিং : </span> <?php echo $rating; ?>/৫  </p><?php } ?>
+				<?php if( $check_director==1 ){ ?><p class="text-left"><span class="bold">পরিচালক : </span> <?php echo $director; ?> </p><?php } ?>
+				<?php if( $check_production==1 ){ ?><p class="text-left"><span class="bold">প্রযোজনা  : </span> <?php echo $production; ?> </p><?php } ?>
+				<?php if( $check_cast==1 ){ ?><p class="text-left"><span class="bold">অভিনেতা  : </span> <?php echo $cast; ?> </p><?php } ?>
+				<?php if( $check_time==1 ){ ?><p class="text-left"><span class="bold">সময় সীমা  : </span> <?php echo $time; ?> </p><?php } ?>
          	</div>
          	</div>
 			<div class="row content-area">
@@ -131,12 +145,13 @@ while( have_posts() ){
 				<div class="right-content-box" style="border:1px solid #000; padding:4px 8px;">
 					<div class="row ">
 					<div class="col-md-12">
-						<p class="text-left"><span class="bold">বয়স সীমা   : </span> <?php echo $ua ; ?> </p>
-						<p class="text-left"><span class="bold"> রেটিং : </span> <?php echo $rating; ?>/৫ </p>
-						<p class="text-left"><span class="bold">পরিচালক : </span> <?php echo $director; ?> </p>
-						<p class="text-left"><span class="bold">প্রযোজনা  : </span> <?php echo $production; ?> </p>
-						<p class="text-left"><span class="bold">অভিনেতা  : </span> <?php echo $cast; ?> </p>
-						<p class="text-left"><span class="bold">সময় সীমা  : </span> <?php echo $time; ?> </p>
+
+						<?php if( $check_ua==1 ){ ?><p class="text-left"><span class="bold">বয়স সীমা   : </span> <?php echo $ua ; ?> </p><?php } ?>
+						<?php if( $check_rating==1 ){ ?><p class="text-left"><span class="bold"> রেটিং : </span> <?php echo $rating; ?>/৫ </p><?php } ?>
+						<?php if( $check_director==1 ){ ?><p class="text-left"><span class="bold">পরিচালক : </span> <?php echo $director; ?> </p><?php } ?>
+						<?php if( $check_production==1 ){ ?><p class="text-left"><span class="bold">প্রযোজনা  : </span> <?php echo $production; ?> </p><?php } ?>
+						<?php if( $check_cast==1 ){ ?><p class="text-left"><span class="bold">অভিনেতা  : </span> <?php echo $cast; ?> </p><?php } ?>
+						<?php if( $check_time==1 ){ ?><p class="text-left"><span class="bold">সময় সীমা  : </span> <?php echo $time; ?> </p><?php } ?>
 					</div>
 						
 					</div>

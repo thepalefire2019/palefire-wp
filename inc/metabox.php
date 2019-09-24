@@ -193,44 +193,70 @@ function bengali_film_review(){
 }
 function bengali_film_review_mbx_fn( $post ){
   $post_id = $post->ID;
+
   $ua = get_post_meta( $post_id,"bengali_ua",true );
+  $check_ua = get_post_meta( $post_id,"bengali_check_ua",true );
+ 
   $production = get_post_meta( $post_id,"bengali_production",true );
+  $check_production = get_post_meta( $post_id,"bengali_check_production",true );
+
   $director = get_post_meta( $post_id,"bengali_director",true );
+  $check_director = get_post_meta( $post_id,"bengali_check_director",true );
+
   $release = get_post_meta( $post_id,"bengali_release",true );
+  $check_release = get_post_meta( $post_id,"bengali_check_release",true );
+
   $cast = get_post_meta( $post_id,"bengali_cast",true );
+  $check_cast = get_post_meta( $post_id,"bengali_check_cast",true );
+
   $rating = get_post_meta( $post_id,"bengali_rating",true );
+  $check_rating = get_post_meta( $post_id,"bengali_check_rating",true );
+
   $time = get_post_meta( $post_id,"bengali_time",true );
+  $check_time = get_post_meta( $post_id,"bengali_check_time",true );
   
 
   ?>
     <table>
       <tr>
+        <td></td>
+        <td></td>
+        <td>Show in Front End</td>
+      </tr>
+      <tr>
         <td>Age :</td>
         <td><input type="radio" name="ua" value="A" <?php if( $ua == 'A' ){ echo 'checked'; } ?>>A <input type="radio" name="ua" value="U/A" <?php if( $ua == 'U/A' ){ echo 'checked'; } ?>>U/A</td>
+        <td align="center"><input type="checkbox" name="check_ua" value="1" <?php if( $check_ua==1 ){ echo 'checked'; } ?>></td>
       </tr>
       <tr>
         <td>Production House :</td>
         <td><input type="input" name="production" value="<?php echo $production ?>"></td>
+        <td align="center"><input type="checkbox" name="check_production" value="1" <?php if( $check_production==1 ){ echo 'checked'; } ?>></td>
       </tr>
       <tr>
         <td>Director :</td>
         <td><input type="input" name="director" value="<?php echo $director ?>"></td>
+        <td align="center"><input type="checkbox" name="check_director" value="1" <?php if( $check_director==1 ){ echo 'checked'; } ?>></td>
       </tr>
       <tr>
         <td>Cast :</td>
         <td><input type="input" name="cast" value="<?php echo $cast ?>"></td>
+        <td align="center"><input type="checkbox" name="check_cast" value="1" <?php if( $check_cast==1 ){ echo 'checked'; } ?>></td>
       </tr>
       <tr>
         <td>Release Date :</td>
         <td><input type="date" name="release" value="<?php echo $release ?>"></td>
+        <td align="center"><input type="checkbox" name="check_release" value="1" <?php if( $check_release==1 ){ echo 'checked'; } ?>></td>
       </tr>
       <tr>
         <td>Rating:</td>
         <td><input type="text" name="rating" value="<?php echo $rating ?>"> /5</td>
+        <td align="center"><input type="checkbox" name="check_rating" value="1" <?php if( $check_rating==1 ){ echo 'checked'; } ?>></td>
       </tr>
       <tr>
         <td>Total Timing:</td>
         <td><input type="text" name="time" value="<?php echo $time ?>"></td>
+        <td align="center"><input type="checkbox" name="check_time" value="1" <?php if( $check_time==1 ){ echo 'checked'; } ?>></td>
       </tr>
 
       
@@ -243,54 +269,118 @@ function bengali_film_review_mbx_fn( $post ){
 add_action("save_post","save_bengali_film_review_mbx");
 function save_bengali_film_review_mbx( $post_id ){
   $ua  = isset( $_REQUEST['ua'])?trim($_REQUEST['ua'] ):"";
+  $check_ua  = isset( $_REQUEST['check_ua'])?trim($_REQUEST['check_ua'] ):"";
+
   $production  = isset( $_REQUEST['production'])?trim($_REQUEST['production'] ):"";
+  $check_production  = isset( $_REQUEST['check_production'])?trim($_REQUEST['check_production'] ):"";
+
   $director  = isset( $_REQUEST['director'])?trim($_REQUEST['director'] ):"";
+  $check_director  = isset( $_REQUEST['check_director'])?trim($_REQUEST['check_director'] ):"";
+
   $release  = isset( $_REQUEST['release'])?trim($_REQUEST['release'] ):"";
+  $check_release  = isset( $_REQUEST['check_release'])?trim($_REQUEST['check_release'] ):"";
+
   $cast  = isset( $_REQUEST['cast'])?trim($_REQUEST['cast'] ):"";
+  $check_cast  = isset( $_REQUEST['check_cast'])?trim($_REQUEST['check_cast'] ):"";
+
   $rating  = isset( $_REQUEST['rating'])?trim($_REQUEST['rating'] ):"";
+  $check_rating  = isset( $_REQUEST['check_rating'])?trim($_REQUEST['check_rating'] ):"";
+
   $time  = isset( $_REQUEST['time'])?trim($_REQUEST['time'] ):"";
+  $check_time  = isset( $_REQUEST['check_time'])?trim($_REQUEST['check_time'] ):"";
 
 
   if(!empty($ua)){
     update_post_meta( $post_id,"bengali_ua",$ua );
   }else{
-    update_post_meta( $post_id,"bengali_ua","0" ); 
+    update_post_meta( $post_id,"bengali_ua","" ); 
   }
+  if(!empty($check_ua)){
+    update_post_meta( $post_id,"bengali_check_ua",$check_ua );
+  }else{
+    update_post_meta( $post_id,"bengali_check_ua","0" ); 
+  }
+
+
 
   if(!empty($production)){
     update_post_meta( $post_id,"bengali_production",$production );
   }else{
     update_post_meta( $post_id,"bengali_production","" ); 
   }
+  if(!empty($check_production)){
+    update_post_meta( $post_id,"bengali_check_production",$check_production );
+  }else{
+    update_post_meta( $post_id,"bengali_check_production","0" ); 
+  }
+
+
+
 
   if(!empty($director)){
     update_post_meta( $post_id,"bengali_director",$director );
   }else{
     update_post_meta( $post_id,"bengali_director","" ); 
   }
+   if(!empty($check_director)){
+    update_post_meta( $post_id,"bengali_check_director",$check_director );
+  }else{
+    update_post_meta( $post_id,"bengali_check_director","0" ); 
+  }
+
+
 
   if(!empty($release)){
     update_post_meta( $post_id,"bengali_release",$release );
   }else{
     update_post_meta( $post_id,"bengali_release","" ); 
   }
+  if(!empty($check_release)){
+    update_post_meta( $post_id,"bengali_check_release",$check_release );
+  }else{
+    update_post_meta( $post_id,"bengali_check_release","0" ); 
+  }
+
+
+
 
   if(!empty($cast)){
     update_post_meta( $post_id,"bengali_cast",$cast );
   }else{
     update_post_meta( $post_id,"bengali_cast","" ); 
   }
+  if(!empty($check_cast)){
+    update_post_meta( $post_id,"bengali_check_cast",$check_cast );
+  }else{
+    update_post_meta( $post_id,"bengali_check_cast","0" ); 
+  }
+
+
+
 
   if(!empty($rating)){
     update_post_meta( $post_id,"bengali_rating",$rating );
   }else{
     update_post_meta( $post_id,"bengali_rating","" ); 
   }
+  if(!empty($check_rating)){
+    update_post_meta( $post_id,"bengali_check_rating",$check_rating );
+  }else{
+    update_post_meta( $post_id,"bengali_check_rating","0" ); 
+  }
+
+
+
 
   if(!empty($time)){
     update_post_meta( $post_id,"bengali_time",$time );
   }else{
     update_post_meta( $post_id,"bengali_time","" ); 
+  }
+  if(!empty($check_time)){
+    update_post_meta( $post_id,"bengali_check_time",$check_time );
+  }else{
+    update_post_meta( $post_id,"bengali_check_time","" ); 
   }
 
   
