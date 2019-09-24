@@ -194,7 +194,7 @@ body{
                 height: 4px;
                 width:30px;
                 border-radius: 3px;
-                background-color: var(--main-color);
+                background-color: #fff;
                 content: '';
     }
 
@@ -222,7 +222,7 @@ body{
 
     .ws-p-toggle:checked ~ .ws-p-toggle-label span{
 
-                background-color: white;
+                background-color: transparent;
                 transition: background-color 250ms linear;
     }
 
@@ -964,6 +964,7 @@ li.custom-dropdown{position: absolute;background-color: #fff;width: 100px;box-sh
     ul.drop{display: none;}
     li.dropdown{position:unset;background-color: #fff;width: 100%;box-shadow: unset;}
     .ft-subscribe{margin-left: 36%; margin-bottom: 15px;}
+    .ws-p-link{margin:0 1em;color: #000;font-size: 1.2rem;text-transform: uppercase;font-weight: 500;}
 
 }   
 
