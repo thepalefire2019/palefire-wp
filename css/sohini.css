@@ -19,7 +19,7 @@
 
 body{
 
-            font-family: sans-less;
+            font-family: roboto,sans-serif;;
 }
 
 
@@ -286,7 +286,7 @@ body{
             line-height: 4rem;
             border-bottom: 2px solid var(--main-color);
             width: fit-content;
-            font-family: sans-less;
+            font-family: roboto,sans-serif;;
             
 }
 
@@ -296,7 +296,7 @@ body{
             font-size: 2rem;
             padding-top: 1rem;
             text-align: justify;
-            font-family: sans-less;
+            font-family: roboto,sans-serif;;
             
 }
 
@@ -924,16 +924,16 @@ input.ws-input{
 .ft-logo{width: 200px; height: 200px; margin: 0 auto; padding-top: 50px;}
 .ft-logo img{width: 200px; height: 200px; text-align: center;}
 .ft-head{width: fit-content; height: 150px; margin: 0 auto; padding-top: 10px; text-align: center;}
-.ft-head h2{font-weight: 800; font-size:65px ; color:#ffffff; text-transform: uppercase;font-family: sans-less;}
+.ft-head h2{font-weight: 800; font-size:65px ; color:#ffffff; text-transform: uppercase;font-family: roboto,sans-serif;;}
 .ft-para{width: 460px; height: 150px; margin: 0 auto; padding-top: 1px; text-align: center;}
-.ft-para p{font-weight: 200; font-size:22px ; color:#ffffff; line-height: 32px;font-family: sans-less;}
+.ft-para p{font-weight: 200; font-size:22px ; color:#ffffff; line-height: 32px;font-family: roboto,sans-serif;;}
 .ft-social{margin:50px 0 0 10px;}
 .ft-social ul li img{height: 32px; width: 32px;}
 .ft-social ul{list-style: none;}
 .ft-social ul li{display:inline; padding: 0 0 0 10px;}
 .line{margin:10px 0 0 0; padding:0; line-height: 0; border-top: 1px solid #fff;}
 .ft-contact{ margin:10px 0 0 10px; }
-.ft-contact h2{ font-size: 20px; color: #fff; font-weight: 200; text-transform: uppercase; font-family: sans-less; }
+.ft-contact h2{ font-size: 20px; color: #fff; font-weight: 200; text-transform: uppercase; font-family: roboto,sans-serif;; }
 .ft-contact p{font-family: sans-less;}
 .ft-contact-mobile{display: none;}
 .ft-subscribe{text-transform: uppercase; background: transparent; color:#fff; border: 2px solid #fff; width: fit-content;
