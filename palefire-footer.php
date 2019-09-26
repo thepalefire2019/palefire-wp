@@ -23,7 +23,7 @@
       <div class="row">
 
         <div class="col-md-12">
-          <a href="#"><p class="text-right ft-subscribe" >Subscribe</p></a>
+          <a href="<?php echo site_url('/newsletter'); ?>"><p class="text-right ft-subscribe" >Subscribe</p></a>
         </div>
       </div>
       
