@@ -35,7 +35,7 @@
                            </li>
 
                            <li class="nav-item">
-                              <a class="nav-link" href="<?php echo site_url('/#'); ?>">Palefire Books</a>
+                              <a class="nav-link" href="<?php echo site_url('/palefire-books'); ?>">Palefire Books</a>
                            </li>
 
                            <li class="nav-item">
