@@ -52,7 +52,7 @@
           <h2 class="text-left">Contact</h2>
           <p class="text-left">Kolkata - 700123</p>
           <p class="text-left">8961819473</p>
-          <p class="text-left">palefire2019@gmail.com</p>
+          <p class="text-left">contact@thepalefire.com</p>
         </div> 
         <div class="col-md-4"><p>&copy; 2019 PaleFire - All Rights Reserved.</p>></div> 
         <div class="col-md-4">
@@ -71,7 +71,7 @@
           <h2 class="text-center">Contact</h2>
           <p class="text-center">Kolkata - 700123</p>
           <p class="text-center">8961819473</p>
-          <p class="text-center">palefire2019@gmail.com</p>
+          <p class="text-center">contact@thepalefire.com</p>
         </div> 
       </div>
       
