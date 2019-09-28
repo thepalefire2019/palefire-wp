@@ -17,7 +17,9 @@
 
   <!-- Global site tag (gtag.js) - Google Analytics -->
 
-
+  <!-- Google adSense -->
+  <script data-ad-client="ca-pub-7597294505833419" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+  <!-- Google adSense -->
 
 
   <meta charset="<?php bloginfo( 'charset' ); ?>">
