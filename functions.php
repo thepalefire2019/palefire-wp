@@ -3,6 +3,7 @@
   require get_template_directory(). '/portfolio/register.php';
   require get_template_directory(). '/services/register.php';
   require get_template_directory(). '/bengali/register.php';
+  require get_template_directory(). '/books/register.php';
 	require get_template_directory(). '/inc/metabox.php';
 
 
