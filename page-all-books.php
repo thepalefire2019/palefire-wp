@@ -24,7 +24,7 @@
 					$book_postImg = get_the_post_thumbnail_url($book_post_id, 'pf-regular');
 			?>
 
-			<div class="col-md-3">
+			<div class="col-md-3 col-12">
 				<div class="bk-parent-box">
 					<div class="bk-all-img img-fluid">
 						<img src="<?php echo $book_postImg ?>">

@@ -62,7 +62,7 @@
     /** palefire books **/
     .bk-float-box{position: absolute; width: 17%; height: 52vh; background: #000;right:10%}
     .bk-float-img{position: absolute; transform: rotate(270deg); width:295% !important; bottom: 147px ;
-        left:-66px;}
+        left:-2px;}
     .bk-discover{right: 12%; top:59vh;}
     .bk-content-box{top:14vh;left: 13%}
     .bk-side-bar{width:6%;}

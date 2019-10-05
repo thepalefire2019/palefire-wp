@@ -15,7 +15,7 @@ get_header();
 		
 		
 		<div class="bk-content-box">
-			<p class="bk-content-para" >Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an<span style="color:#a86a2f"> unknown </span>printer took a galley of type and scrambled it</p>
+			<p class="bk-content-para" >The desire behind Palefire Books is to give access to rare books to those rare and beautiful people who still sit by the windows on rainy days and read.<span style="color:#a86a2f"> </span></p>
 		</div>
 		<div class="bk-side-bar">
 			<div class="bk-btn-menu">
