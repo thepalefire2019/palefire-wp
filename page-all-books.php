@@ -33,7 +33,7 @@
 						<a href="#"><h1><?php echo $book_title; ?></h1></a>
 					</div>
 					<div class="bk-all-desc">
-						<p><?php echo $book_content;  ?> </p>
+						<p><?php echo wp_trim_words( get_the_content(),18 )  ?> </p>
 					</div>
 					
 				</div>
