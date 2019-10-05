@@ -2,9 +2,9 @@
 	get_header();
 	?>
 	<div class="bk-all-header">
-		<div class="bk-head-logo">
+		<a href="<?php echo site_url('palefire-books'); ?>"><div class="bk-head-logo">
 			<img class="img-fluid" src="<?php echo get_theme_file_uri('img/float.png'); ?>">
-		</div>
+		</div></a>
 		<ul>
 			<a href="<?php echo site_url(); ?>"><li>Home</li></a>
 			<a href="https://instagram.com/palefire_books?igshid=1c92cl7ce9gdx"><li>Instagram</li></a>
