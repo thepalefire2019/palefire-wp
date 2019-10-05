@@ -5111,9 +5111,9 @@ header{
 
 
 .bk-all-body{background-color: #1D1D1D; width:100%;}
-.bk-parent-box{ width: 100%; height:450px; margin:20px 0 60px 0;}
-.bk-all-img{height:290px; width: 100%;}
-.bk-all-img img{height:290px; width: 100%;}
+.bk-parent-box{ width: 100%; height:560px; margin:20px 0 60px 0;}
+.bk-all-img{height:400px; width: 100%;}
+.bk-all-img img{height:400px; width: 100%;}
 .bk-all-title{margin: 10px 0 5px 0}
 .bk-all-title h1{font-size: 24px; line-height: 28.8px; font-weight: 600px; text-align: center;
     text-transform: uppercase; color: #ffffff;}
