@@ -43,7 +43,7 @@ get_header();
 				</ul>
 			</div>
 			<div class="bk-border-menu-right">
-				<h2> Continue to palefire books </h2>
+				<a href="<?php  echo site_url('all-books');  ?>"><h2> Continue to palefire books </h2></a>
 			</div>
 		</div>
 	</div>

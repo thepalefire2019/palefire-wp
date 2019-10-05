@@ -21,7 +21,7 @@
 					//wp_trim_words( get_the_content(),18 )
 					$book_content = get_the_content();
 					$book_postUrl = get_the_permalink();
-					$book_postImg = get_the_post_thumbnail_url($book_post_id, 'pf-regular');
+					$book_postImg = get_the_post_thumbnail_url($book_post_id, 'pf-medium');
 			?>
 
 			<div class="col-md-3 col-12">
