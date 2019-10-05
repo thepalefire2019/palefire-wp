@@ -15,7 +15,7 @@ get_header();
 		
 		
 		<div class="bk-content-box">
-			<p class="bk-content-para" >The desire behind Palefire Books is to give access to rare books to those rare and beautiful people who still sit by the windows on rainy days and read.<span style="color:#a86a2f"> </span></p>
+			<p class="bk-content-para" >Palefire Books is created by <a href="http://thepalefire.com/"><span style="color:#a86a2f"> THEPALEFIRE.COM</span></a>, where our aim is to make rare books affordable. The desire behind Palefire Books is to give access to those rare and beautiful people who still sit by the windows on rainy days, and read. </p>
 		</div>
 		<div class="bk-side-bar">
 			<div class="bk-btn-menu">
