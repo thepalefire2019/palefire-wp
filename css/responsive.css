@@ -59,5 +59,21 @@
     .about-banner-content h5{margin-top: 150px;}
     .phone-film{display: block; margin-top:220px; margin-left: 10px; border-bottom: 1px dotted #ddd; padding: 10px 8px}
     .content-p-film{margin-top: 0;}
+    /** palefire books **/
+    .bk-float-box{position: absolute; width: 17%; height: 52vh; background: #000;right:10%}
+    .bk-float-img{position: absolute; transform: rotate(270deg); width:295% !important; bottom: 147px ;
+        left:-66px;}
+    .bk-discover{right: 12%; top:59vh;}
+    .bk-content-box{top:14vh;left: 13%}
+    .bk-side-bar{width:6%;}
+    .bk-btn-menu{left:6px;}
+    .bk-menu-toggle-bar-1{left: 9px; }
+    .bk-menu-toggle-bar-2{right:7px; }
+    .bk-border-menu-left{left:10%;}
+    .bk-menu-toggle-bar-cls-1{left:15px;}
+    .bk-menu-toggle-bar-cls-2{right:-9px;}
+    .bk-border-menu-left ul{top:32vh; left:-5px;}
+    .bk-border-menu-right h2{left:28px;top:42vh; font-size: 25px}
+    /** palefire books **/
 
 }

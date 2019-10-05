@@ -30,6 +30,7 @@ function tg_load_scripts(){
 
 	wp_enqueue_script('bootstrap',get_template_directory_uri().'/js/bootstrap.min.js',array('jquery'),'4.2.1',true);
 	wp_enqueue_script('pf',get_template_directory_uri().'/js/pf.js',array('jquery'),microtime(),true);
+	wp_enqueue_script('jquery-ui',get_template_directory_uri().'/js/jquery-ui.js',array('jquery'),'1.0',true);
 	
 } 
 add_action('wp_enqueue_scripts','tg_load_scripts');

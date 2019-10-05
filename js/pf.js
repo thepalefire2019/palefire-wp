@@ -36,4 +36,33 @@ $(document).ready(function() {
 
 });  //End of cookie consent
 
+//palefire books menu
+
+$(document).ready(function() {
+  $('.bk-btn-menu').click(function(){
+
+    $(this).addClass('bk-menu-active');
+    if( $('.bk-btn-menu').hasClass('bk-menu-active') ){
+      $('.bk-full-screen-menu').show("slide",{direction: "left"}, 1000);
+    }
+  });
+
+  $('.bk-btn-menu-close').click(function(){
+
+    if( $('.bk-btn-menu').hasClass('bk-menu-active') ){
+      $('.bk-btn-menu').removeClass('bk-menu-active');
+      $('.bk-full-screen-menu').hide("slide",{direcion:"right"},1000);
+    }
+
+    
+  });
+
+  
+  
+  // $('.bk-mobile-menu-btn').click( function(){
+  //  $('.bk-mobile-menu').toggle( "slide",{direcion:"left"},800 );
+  // } );
+});
+//palefire books menu
+
 
