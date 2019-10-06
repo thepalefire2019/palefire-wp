@@ -25,12 +25,13 @@
 				while( $all_books->have_posts() ){
 					$all_books->the_post();
 
-					$book_post_id = get_the_ID();
+					$book_id = get_the_ID();
 				 	$book_title = get_the_title();
 					//wp_trim_words( get_the_content(),18 )
 					$book_content = get_the_content();
 					$book_postUrl = get_the_permalink();
 					$book_postImg = get_the_post_thumbnail_url($book_post_id, 'pf-medium');
+					$book_price = get_post_meta( $book_id,"book_price",true );
 			?>
 
 			<div class="col-md-3 col-12">
@@ -44,6 +45,10 @@
 					<div class="bk-all-desc">
 						<p><?php echo wp_trim_words( get_the_content(),18 )  ?> </p>
 					</div>
+					<div class="bk-all-price">
+						<p><i>&#8377; 100.00</i></p>
+					</div>
+					<div class="bk-all-buy"></div>
 					
 				</div>
 			</div>
