@@ -392,3 +392,40 @@ function save_bengali_film_review_mbx( $post_id ){
 //  ===========================//post metabox for bengali film review=====================
 
 
+//  ===========================post metabox for books=====================
+add_action("add_meta_boxes", "book_metaboxes");
+function book_metaboxes(){
+  add_meta_box( 
+        'book-metabox',
+        'Book  Details',
+        'book_metabox_fn',
+        'pf_book',
+        'normal',
+        'high'
+    );
+}
+function book_metabox_fn($book){
+  $book_id = $book->ID;
+  $book_price = get_post_meta( $book_id,"book_price",true );
+  ?>
+  <table>
+    <tr>
+      <td><label>Price (Rs):</label></td>
+      <td><input type="text" name="book_price" style="border:1px solid #000000" value="<?php echo $book_price; ?>"></td>
+    </tr> 
+  </table>
+  <?php
+}
+add_action("save_post","save_book_mbx");
+
+function save_book_mbx($book_id){
+  $book_price  = isset( $_REQUEST['book_price'])?trim($_REQUEST['book_price'] ):"";
+
+  if(!empty($book_price)){
+    update_post_meta( $book_id,"book_price",$book_price );
+  }else{
+    update_post_meta( $book_id,"book_price","" ); 
+  }
+
+}
+//  ===========================post metabox for books=====================
