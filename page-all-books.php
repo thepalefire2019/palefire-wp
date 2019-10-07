@@ -30,8 +30,10 @@
 					//wp_trim_words( get_the_content(),18 )
 					$book_content = get_the_content();
 					$book_postUrl = get_the_permalink();
-					$book_postImg = get_the_post_thumbnail_url($book_post_id, 'pf-medium');
+					$book_postImg = get_the_post_thumbnail_url($book_id, 'pf-medium');
 					$book_price = get_post_meta( $book_id,"book_price",true );
+					$show_book_price = get_post_meta( $book_id,"show_book_price",true );
+
 			?>
 
 			<div class="col-md-3 col-12">
@@ -45,9 +47,11 @@
 					<div class="bk-all-desc">
 						<p><?php echo wp_trim_words( get_the_content(),18 )  ?> </p>
 					</div>
+					<?php if( $show_book_price == 1 ){ ?>
 					<div class="bk-all-price">
 						<p><i>&#8377; 100.00</i></p>
 					</div>
+					<?php } ?>
 					<div class="bk-all-buy"></div>
 					
 				</div>

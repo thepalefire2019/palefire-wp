@@ -407,11 +407,13 @@ function book_metaboxes(){
 function book_metabox_fn($book){
   $book_id = $book->ID;
   $book_price = get_post_meta( $book_id,"book_price",true );
+  $show_book_price = get_post_meta( $book_id,"show_book_price",true );
   ?>
   <table>
     <tr>
       <td><label>Price (Rs):</label></td>
       <td><input type="text" name="book_price" style="border:1px solid #000000" value="<?php echo $book_price; ?>"></td>
+      <td><input type="checkbox" name="show_book_price" style="border:1px solid #000000" value="1" <?php if( $show_book_price == 1 ){ echo 'checked';} ?>></td>
     </tr> 
   </table>
   <?php
@@ -420,11 +422,18 @@ add_action("save_post","save_book_mbx");
 
 function save_book_mbx($book_id){
   $book_price  = isset( $_REQUEST['book_price'])?trim($_REQUEST['book_price'] ):"";
+  $show_book_price  = isset( $_REQUEST['show_book_price'])?trim($_REQUEST['show_book_price'] ):"";
 
   if(!empty($book_price)){
     update_post_meta( $book_id,"book_price",$book_price );
   }else{
     update_post_meta( $book_id,"book_price","" ); 
+  }
+
+  if(!empty($show_book_price)){
+    update_post_meta( $book_id,"show_book_price",$show_book_price );
+  }else{
+    update_post_meta( $book_id,"show_book_price","" ); 
   }
 
 }
