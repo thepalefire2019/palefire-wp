@@ -38,11 +38,13 @@
 
 			<div class="col-md-2 col-12">
 				<div class="bk-parent-box">
+					
 					<div class="bk-all-img img-fluid">
 						<img src="<?php echo $book_postImg ?>">
 					</div>
+					
 					<div class="bk-all-title">
-						<a href="#"><h1><?php echo $book_title; ?></h1></a>
+						<a href="#"><h1><?php echo wp_trim_words($book_title,7); ?></h1></a>
 					</div>
 					<div class="bk-all-desc">
 						<p>Author : </p>
