@@ -77,6 +77,9 @@
     .bk-head-logo{width: 150px; left: 15px;top: 2px;}
     .bk-all-header ul{top:27px; right:8px;}
     .bk-all-header ul li{margin-right: 8px;}
+    .bk-parent-box{height:625px; }
+    .bk-all-img{height:380px; width: 90%;margin-left: 9%;}
+    .bk-all-img img{height:380px; width: 90%;}
     /** palefire books **/
 
 }
