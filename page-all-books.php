@@ -36,7 +36,7 @@
 
 			?>
 
-			<div class="col-md-3 col-12">
+			<div class="col-md-2 col-12">
 				<div class="bk-parent-box">
 					<div class="bk-all-img img-fluid">
 						<img src="<?php echo $book_postImg ?>">
@@ -45,14 +45,23 @@
 						<a href="#"><h1><?php echo $book_title; ?></h1></a>
 					</div>
 					<div class="bk-all-desc">
-						<p><?php echo wp_trim_words( get_the_content(),18 )  ?> </p>
+						<p>Author : </p>
+						<p>Publisher : </p>
 					</div>
 					<?php if( $show_book_price == 1 ){ ?>
 					<div class="bk-all-price">
-						<p><i>&#8377; 100.00</i></p>
+						<p><i>&#8377; <?php echo $book_price; ?></i></p>
 					</div>
-					<?php } ?>
-					<div class="bk-all-buy"></div>
+					<?php }else{
+						?>
+					<div class="bk-all-price">
+						<p>Contact Us for Price</p>
+					</div>
+						<?php
+					} ?>
+					<div class="topic">
+						<a href="<?php echo site_url('/buy-now'); ?>">Buy Now</a>
+					</div>
 					
 				</div>
 			</div>

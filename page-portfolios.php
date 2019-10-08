@@ -1,5 +1,6 @@
 <?php 
 get_header();
+require get_template_directory(). '/palefire-software-header.php';
 ?>
 
 <section class="breadcrumb breadcrumb_bg">
@@ -41,6 +42,8 @@ get_header();
             <div class="row">
                <div class="col-xl-12">
                   <div class="gallery_part_item filtr-container">
+
+                     
                      <a href="portfolio_details.html" class="img-gal filtr-item" data-category="1" style="background-image: url('img/gallery/gallery_item_1.png')">
                         <div class="single_gallery_item">
                            <div class="single_gallery_item_iner">
@@ -51,6 +54,8 @@ get_header();
                            </div>
                         </div>
                      </a>
+
+
                      <a href="portfolio_details.html" class="img-gal width-1 filtr-item" data-category="2" style="background-image: url('img/gallery/gallery_item_2.png')">
                         <div class="single_gallery_item">
                            <div class="single_gallery_item_iner">
