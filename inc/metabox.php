@@ -408,6 +408,18 @@ function book_metabox_fn($book){
   $book_id = $book->ID;
   $book_price = get_post_meta( $book_id,"book_price",true );
   $show_book_price = get_post_meta( $book_id,"show_book_price",true );
+
+  $book_author = get_post_meta( $book_id,"book_author",true );
+  $show_book_author = get_post_meta( $book_id,"show_book_author",true );
+
+  $book_publisher = get_post_meta( $book_id,"book_publisher",true );
+  $show_book_publisher = get_post_meta( $book_id,"show_book_publisher",true );
+
+  $book_pages = get_post_meta( $book_id,"book_pages",true );
+  $show_book_pages = get_post_meta( $book_id,"show_book_pages",true );
+
+  $book_format = get_post_meta( $book_id,"book_format",true );
+  $show_book_format = get_post_meta( $book_id,"show_book_format",true );
   ?>
   <table>
     <tr>
@@ -415,6 +427,34 @@ function book_metabox_fn($book){
       <td><input type="text" name="book_price" style="border:1px solid #000000" value="<?php echo $book_price; ?>"></td>
       <td><input type="checkbox" name="show_book_price" style="border:1px solid #000000" value="1" <?php if( $show_book_price == 1 ){ echo 'checked';} ?>></td>
     </tr> 
+    <tr>
+      <td><label>Author : </label></td>
+      <td><input type="text" name="book_author" style="border:1px solid #000000" value="<?php echo $book_author; ?>"></td>
+      <td><input type="checkbox" name="show_book_author" style="border:1px solid #000000" value="1" <?php if( $show_book_author == 1 ){ echo 'checked';} ?>></td>
+    </tr>
+    <tr>
+      <td><label>Publisher : </label></td>
+      <td><input type="text" name="book_publisher" style="border:1px solid #000000" value="<?php echo $book_publisher; ?>"></td>
+      <td><input type="checkbox" name="show_book_publisher" style="border:1px solid #000000" value="1" <?php if( $show_book_publisher == 1 ){ echo 'checked';} ?>></td>
+    </tr>
+    <tr>
+      <td><label>Pages : </label></td>
+      <td><input type="text" name="book_pages" style="border:1px solid #000000" value="<?php echo $book_pages; ?>"></td>
+      <td><input type="checkbox" name="show_book_pages" style="border:1px solid #000000" value="1" <?php if( $show_book_pages == 1 ){ echo 'checked';} ?>></td>
+    </tr>
+
+    <tr>
+      <td><label>Format : </label></td>
+      <td>
+        <select name="book_format">
+          <option value="Paperback" <?php if( $book_format == 'Paperback' ){ echo 'selected'; } ?> >Paperback</option>  
+          <option value="Hardcover" <?php if( $book_format == 'Hardcover' ){ echo 'selected'; } ?>  >Hardcover</option>  
+          <option value="Both" <?php if( $book_format == 'Both' ){ echo 'selected'; } ?>  >Both</option>  
+        </select>
+      </td>
+      <td><input type="checkbox" name="show_book_format" style="border:1px solid #000000" value="1" <?php if( $show_book_format == 1 ){ echo 'checked';} ?>></td>
+    </tr>
+
   </table>
   <?php
 }
@@ -423,6 +463,19 @@ add_action("save_post","save_book_mbx");
 function save_book_mbx($book_id){
   $book_price  = isset( $_REQUEST['book_price'])?trim($_REQUEST['book_price'] ):"";
   $show_book_price  = isset( $_REQUEST['show_book_price'])?trim($_REQUEST['show_book_price'] ):"";
+
+  $book_author = isset( $_REQUEST['book_author'])?trim($_REQUEST['book_author'] ):"";
+  $show_book_author  = isset( $_REQUEST['show_book_author'])?trim($_REQUEST['show_book_author'] ):"";
+
+  $book_publisher = isset( $_REQUEST['book_publisher'])?trim($_REQUEST['book_publisher'] ):"";
+  $show_book_publisher  = isset( $_REQUEST['show_book_publisher'])?trim($_REQUEST['show_book_publisher'] ):"";
+
+  $book_pages = isset( $_REQUEST['book_pages'])?trim($_REQUEST['book_pages'] ):"";
+  $show_book_pages  = isset( $_REQUEST['show_book_pages'])?trim($_REQUEST['show_book_pages'] ):"";
+
+  $book_format = isset( $_REQUEST['book_format'])?trim($_REQUEST['book_format'] ):"";
+  $show_book_format  = isset( $_REQUEST['show_book_format'])?trim($_REQUEST['show_book_format'] ):"";
+
 
   if(!empty($book_price)){
     update_post_meta( $book_id,"book_price",$book_price );
@@ -433,8 +486,65 @@ function save_book_mbx($book_id){
   if(!empty($show_book_price)){
     update_post_meta( $book_id,"show_book_price",$show_book_price );
   }else{
-    update_post_meta( $book_id,"show_book_price","" ); 
+    update_post_meta( $book_id,"show_book_price","0" ); 
   }
+
+
+
+  if(!empty($book_author)){
+    update_post_meta( $book_id,"book_author",$book_author );
+  }else{
+    update_post_meta( $book_id,"book_author","" ); 
+  }
+
+  if(!empty($show_book_author)){
+    update_post_meta( $book_id,"show_book_author",$show_book_author );
+  }else{
+    update_post_meta( $book_id,"show_book_author","0" ); 
+  }
+
+
+
+
+  if(!empty($book_publisher)){
+    update_post_meta( $book_id,"book_publisher",$book_publisher );
+  }else{
+    update_post_meta( $book_id,"book_publisher","" ); 
+  }
+
+  if(!empty($show_book_publisher)){
+    update_post_meta( $book_id,"show_book_publisher",$show_book_publisher );
+  }else{
+    update_post_meta( $book_id,"show_book_publisher","0" ); 
+  }
+
+
+
+  if(!empty($book_pages)){
+    update_post_meta( $book_id,"book_pages",$book_pages );
+  }else{
+    update_post_meta( $book_id,"book_pages","" ); 
+  }
+
+  if(!empty($show_book_pages)){
+    update_post_meta( $book_id,"show_book_pages",$show_book_pages );
+  }else{
+    update_post_meta( $book_id,"show_book_pages","0" ); 
+  }
+
+
+    if(!empty($book_format)){
+    update_post_meta( $book_id,"book_format",$book_format );
+  }else{
+    update_post_meta( $book_id,"book_format","" ); 
+  }
+
+  if(!empty($show_book_format)){
+    update_post_meta( $book_id,"show_book_format",$show_book_format );
+  }else{
+    update_post_meta( $book_id,"show_book_format","0" ); 
+  }
+
 
 }
 //  ===========================post metabox for books=====================
