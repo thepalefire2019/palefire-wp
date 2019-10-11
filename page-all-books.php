@@ -31,8 +31,21 @@
 					$book_content = get_the_content();
 					$book_postUrl = get_the_permalink();
 					$book_postImg = get_the_post_thumbnail_url($book_id, 'pf-medium');
+
 					$book_price = get_post_meta( $book_id,"book_price",true );
 					$show_book_price = get_post_meta( $book_id,"show_book_price",true );
+
+					$book_author = get_post_meta( $book_id,"book_author",true );
+					$show_book_author = get_post_meta( $book_id,"show_book_author",true );
+
+					$book_publisher = get_post_meta( $book_id,"book_publisher",true );
+					$show_book_publisher = get_post_meta( $book_id,"show_book_publisher",true );
+
+					$book_pages = get_post_meta( $book_id,"book_pages",true );
+					$show_book_pages = get_post_meta( $book_id,"show_book_pages",true );
+
+					$book_format = get_post_meta( $book_id,"book_format",true );
+					$show_book_format = get_post_meta( $book_id,"show_book_format",true );
 
 			?>
 
@@ -47,8 +60,18 @@
 						<a href="#"><h1><?php echo wp_trim_words($book_title,7); ?></h1></a>
 					</div>
 					<div class="bk-all-desc">
-						<p>Author : </p>
-						<p>Publisher : </p>
+						<?php
+						if( $show_book_author == 1 ){
+						?>
+						<p>Author : <?php echo $book_author; ?> </p>
+						<?php 
+						}
+						if( $show_book_publisher == 1 ){
+						?>
+						<p>Publisher : <?php echo $book_publisher; ?> </p>
+						<?php 
+						};
+						?>
 					</div>
 					<?php if( $show_book_price == 1 ){ ?>
 					<div class="bk-all-price">
