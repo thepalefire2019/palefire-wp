@@ -18,7 +18,7 @@
 
 				$all_books = new WP_Query(array(
                            'post_type' => 'pf_book',
-                           'posts_per_page' => 12,
+                           'posts_per_page' => 6,
                            'paged' => $ourCurrentPage 
                            
                          ));
@@ -93,20 +93,29 @@
 			<?php 
 				}
 				
-				echo paginate_links(array(
-					'total' => $all_books->max_num_pages
-				)); 
-
-
-
-				wp_reset_postdata();
+				
 			?>
 
 
 
 			
 			
-	</div>
+		</div>
+		<?php
+			?>
+		<div class="row paginate-parent">
+			<div class="col-md-12 text-right">
+				<?php
+					echo paginate_links(array(
+						'total' => $all_books->max_num_pages
+					)); 
+
+				?>
+			</div>
+		</div>
+		<?php
+			wp_reset_postdata();
+		 ?>
 	</div>
 	</div>
 	<?php
