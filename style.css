@@ -5058,15 +5058,15 @@ header{
 .content-p-film{margin-top: 150px; padding: 35px 20px 10px 30px; text-align: left; text-align: justify; border-bottom: 2px solid #ddd;}
 .content-p-film p{font-size: 19px; padding-bottom: 25px; color: #2C3E50; line-height: 28px; font-weight: 400; word-spacing: 2px;}
 .paginate-parent{ padding:0 130px 40px 0; }
-.page-numbers{  font-size: 20px; border: 1px solid #fff;padding : 2px 6px; color: #a85425;border-radius:3px; 
-    background-color: #1D1D1D; margin-right: 5px;}
+.page-numbers{  font-size: 16px; padding : 2px 6px; color: #a85425;border-radius:3px; 
+    background-color: #1D1D1D; margin-right: 3px;}
 .current{ color:yellow;  }
 .next{}
 .prev{}
 
 /** palefire books **/
 .bk-parent-container{position: relative; width: 100%; height: 100vh; background:#1D1D1D}
-.bk-float-box{position: absolute; width: 19%; height: 70vh; background: #000;right:11%}
+.bk-float-box{position: absolute; width: 19%; height: 70vh; background: #2F2F31;right:11%}
 .bk-float-img{position: absolute; transform: rotate(270deg); width:150% !important; bottom: 150px ;left: -3px;}
 .bk-discover{position: absolute;right: 19%; top:80vh;}
 .bk-discover h6{color: #a86a2f ;transform:rotate(270deg);}
@@ -5116,7 +5116,7 @@ header{
 
 
 .bk-all-body{background-color: #1D1D1D; width:100%;}
-.bk-parent-box{ width: 100%; height:560px; margin:20px 0 60px 0;position: relative; }
+.bk-parent-box{ width: 100%; height:590px; margin:20px 0 60px 0;position: relative; }
 .bk-all-img{height:270px; width: 100%;}
 .bk-all-img img{height:270px; width: 100%;}
 .bk-full-name{  display: block; position: absolute:top:0; width:100%; height:270px; background-color: red;

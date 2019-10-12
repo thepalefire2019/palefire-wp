@@ -18,7 +18,7 @@
 
 				$all_books = new WP_Query(array(
                            'post_type' => 'pf_book',
-                           'posts_per_page' => 6,
+                           'posts_per_page' => 12,
                            'paged' => $ourCurrentPage 
                            
                          ));
@@ -70,8 +70,20 @@
 						?>
 						<p>Publisher : <?php echo $book_publisher; ?> </p>
 						<?php 
-						};
+						}
+						if( $show_book_format == 1 ){
 						?>
+						<p> Format: <?php echo $book_format ?> </p>
+						<?php
+						}
+						if( $show_book_pages ){
+						 ?>
+						
+						<p> Pages: <?php echo $book_pages; ?> </p>
+						<?php
+						}
+						 ?>
+
 					</div>
 					<?php if( $show_book_price == 1 ){ ?>
 					<div class="bk-all-price">
