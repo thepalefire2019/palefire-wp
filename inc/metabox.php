@@ -409,6 +409,9 @@ function book_metabox_fn($book){
   $book_price = get_post_meta( $book_id,"book_price",true );
   $show_book_price = get_post_meta( $book_id,"show_book_price",true );
 
+  $book_original_price = get_post_meta( $book_id,"book_original_price",true );
+  $show_book_original_price = get_post_meta( $book_id,"show_book_original_price",true );
+
   $book_author = get_post_meta( $book_id,"book_author",true );
   $show_book_author = get_post_meta( $book_id,"show_book_author",true );
 
@@ -426,6 +429,11 @@ function book_metabox_fn($book){
       <td><label>Price (Rs):</label></td>
       <td><input type="text" name="book_price" style="border:1px solid #000000" value="<?php echo $book_price; ?>"></td>
       <td><input type="checkbox" name="show_book_price" style="border:1px solid #000000" value="1" <?php if( $show_book_price == 1 ){ echo 'checked';} ?>></td>
+    </tr> 
+     <tr>
+      <td><label>Original Price (Rs):</label></td>
+      <td><input type="text" name="book_original_price" style="border:1px solid #000000" value="<?php echo $book_original_price; ?>"></td>
+      <td><input type="checkbox" name="show_book_original_price" style="border:1px solid #000000" value="1" <?php if( $show_book_original_price == 1 ){ echo 'checked';} ?>></td>
     </tr> 
     <tr>
       <td><label>Author : </label></td>
@@ -464,6 +472,9 @@ function save_book_mbx($book_id){
   $book_price  = isset( $_REQUEST['book_price'])?trim($_REQUEST['book_price'] ):"";
   $show_book_price  = isset( $_REQUEST['show_book_price'])?trim($_REQUEST['show_book_price'] ):"";
 
+  $book_original_price  = isset( $_REQUEST['book_original_price'])?trim($_REQUEST['book_original_price'] ):"";
+  $show_book_original_price  = isset( $_REQUEST['show_book_original_price'])?trim($_REQUEST['show_book_original_price'] ):"";
+
   $book_author = isset( $_REQUEST['book_author'])?trim($_REQUEST['book_author'] ):"";
   $show_book_author  = isset( $_REQUEST['show_book_author'])?trim($_REQUEST['show_book_author'] ):"";
 
@@ -483,12 +494,24 @@ function save_book_mbx($book_id){
     update_post_meta( $book_id,"book_price","" ); 
   }
 
+
   if(!empty($show_book_price)){
     update_post_meta( $book_id,"show_book_price",$show_book_price );
   }else{
     update_post_meta( $book_id,"show_book_price","0" ); 
   }
 
+    if(!empty($book_original_price)){
+    update_post_meta( $book_id,"book_original_price",$book_original_price );
+  }else{
+    update_post_meta( $book_id,"book_original_price","" ); 
+  }
+
+   if(!empty($show_book_original_price)){
+    update_post_meta( $book_id,"show_book_original_price",$show_book_original_price );
+  }else{
+    update_post_meta( $book_id,"show_book_original_price","0" ); 
+  }
 
 
   if(!empty($book_author)){

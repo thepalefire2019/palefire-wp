@@ -35,6 +35,9 @@
 					$book_price = get_post_meta( $book_id,"book_price",true );
 					$show_book_price = get_post_meta( $book_id,"show_book_price",true );
 
+					$book_original_price = get_post_meta( $book_id,"book_original_price",true );
+ 					$show_book_original_price = get_post_meta( $book_id,"show_book_original_price",true );
+
 					$book_author = get_post_meta( $book_id,"book_author",true );
 					$show_book_author = get_post_meta( $book_id,"show_book_author",true );
 
@@ -87,7 +90,10 @@
 					</div>
 					<?php if( $show_book_price == 1 ){ ?>
 					<div class="bk-all-price">
-						<p><i>&#8377; <?php echo $book_price; ?></i></p>
+						<?php if( $show_book_original_price == 1 ){ ?>
+						<p>Original Price :<strike> &#8377; <?php echo $book_original_price; ?></strike></p>
+						<?php } ?>
+						<p>Our Price:<i>&#8377; <?php echo $book_price; ?></i></p>
 					</div>
 					<?php }else{
 						?>

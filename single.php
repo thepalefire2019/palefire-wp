@@ -128,7 +128,7 @@ while( have_posts() ){
 							<img class="img-fluid" src="<?php echo get_theme_file_uri('img/twit.png'); ?>">
 						</div>
 						<div class="col-md-8 col-8 hang">
-							<p><span class="side-portfolio-title">Click Here!</span>: <br>Folow my work on Twitter. </p>
+							<p><span class="side-portfolio-title">Click Here!</span>: <br>Follow my work on Twitter. </p>
 						</div>
 						
 					</div>
@@ -143,7 +143,7 @@ while( have_posts() ){
 							<img class="img-fluid" src="<?php echo get_theme_file_uri('img/insta.png'); ?>">
 						</div>
 						<div class="col-md-8 col-8 hang">
-							<p><span class="side-portfolio-title">Click Here!</span>: <br>Folow my work on Instagram. </p>
+							<p><span class="side-portfolio-title">Click Here!</span>: <br>Follow my work on Instagram. </p>
 						</div>
 						
 					</div>
