@@ -5115,7 +5115,7 @@ header{
 
 
 
-.bk-all-body{background-color: #1D1D1D; width:100%;}
+.bk-all-body{background-color: #1D1D1D; width:100%; min-height: 100vh;}
 .bk-parent-box{ width: 100%; height:620px; margin:20px 0 60px 0;position: relative; }
 .bk-all-img{height:270px; width: 100%;}
 .bk-all-img img{height:270px; width: 100%;}
@@ -5139,8 +5139,11 @@ header{
 .topic a{border: 2px solid #a85425; color: #a85425; width: 100%; font-size: 16px; padding: 16px 50px; 
     text-transform: uppercase; font-weight: 700; border-radius: 0; position: absolute;bottom: 15px;left: 0;}
 .topic a:hover{background:#a85425;color:#fff;text-decoration:none;}
-
-
+.bk-genre-box{ width:100%; height:310px; border:1px solid #a85425; margin:20px 0 60px 0; transition: all 500ms;}
+.bk-genre-box h5{ color:#a85425; font-size: 42px; text-align: center; margin-top: calc( 25% - 16px ); 
+font-weight:600;letter-spacing: 1px ;text-transform: uppercase; transition: all 500ms;}
+.bk-genre-box:hover{ background-color:rgba(0,0,0,5); width:101%; height:315px;  }
+.bk-genre-box h5:hover{text-shadow: 1px 1px #ddd}
 
 
 /** palefire books **/

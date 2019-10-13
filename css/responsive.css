@@ -80,6 +80,7 @@
     .bk-all-header ul li{margin-right: 8px;} 
     .bk-all-img{height:380px; width: 90%;margin-left: 9%;}
     .bk-all-img img{height:380px; width: 90%;}
+    .bk-genre-box h5{ font-size: 32px; margin-top: calc( 36% - 16px ) }
     /** palefire books **/
 
 }

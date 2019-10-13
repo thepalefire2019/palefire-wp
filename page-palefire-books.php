@@ -7,7 +7,7 @@ get_header();
 			
 		</div>
 		<div class="bk-discover">
-			<a href="<?php echo site_url('all-books'); ?>">
+			<a href="<?php echo site_url('all-genres'); ?>">
 				<h6>Discover</h6>
 				<h5>&darr;</h5>
 			</a>
@@ -43,7 +43,7 @@ get_header();
 				</ul>
 			</div>
 			<div class="bk-border-menu-right">
-				<a href="<?php  echo site_url('all-books');  ?>"><h2> Continue to palefire books </h2></a>
+				<a href="<?php  echo site_url('all-genres');  ?>"><h2> Continue to palefire books </h2></a>
 			</div>
 		</div>
 	</div>

@@ -7,8 +7,6 @@
 		</div></a>
 		<ul>
 			<a href="<?php echo site_url(); ?>"><li>Home</li></a>
-			<a href="<?php echo site_url('all-genres'); ?>"><li>Genres</li></a>
-			<a href="<?php echo site_url('all-books'); ?>" ><li style="color:#fff">All Books</li></a>
 			<a href="https://instagram.com/palefire_books?igshid=1c92cl7ce9gdx"><li>Instagram</li></a>
 		</ul>
 	</div>
@@ -16,16 +14,16 @@
 	<div class="container-fluid">
 		<div class="row">
 			<?php 
-				$ourCurrentPage = get_query_var('paged');
+				// $ourCurrentPage = get_query_var('paged');
 
-				$all_books = new WP_Query(array(
-                           'post_type' => 'pf_book',
-                           'posts_per_page' => 12,
-                           'paged' => $ourCurrentPage 
+				// $all_books = new WP_Query(array(
+    //                        'post_type' => 'pf_book',
+    //                        'posts_per_page' => 12,
+    //                        'paged' => $ourCurrentPage 
                            
-                         ));
-				while( $all_books->have_posts() ){
-					$all_books->the_post();
+    //                      ));
+				while( have_posts() ){
+					the_post();
 
 					$book_id = get_the_ID();
 				 	$book_title = get_the_title();
@@ -126,9 +124,7 @@
 		<div class="row paginate-parent">
 			<div class="col-md-12 text-right">
 				<?php
-					echo paginate_links(array(
-						'total' => $all_books->max_num_pages
-					)); 
+					echo paginate_links(); 
 
 				?>
 			</div>
