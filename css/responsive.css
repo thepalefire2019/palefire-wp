@@ -60,6 +60,7 @@
     .phone-film{display: block; margin-top:220px; margin-left: 10px; border-bottom: 1px dotted #ddd; padding: 10px 8px}
     .content-p-film{margin-top: 0;}
     /** palefire books **/
+    .bk-parent-box{height:662px; }
     .bk-float-box{position: absolute; width: 17%; height: 52vh; background: #000;right:10%}
     .bk-float-img{position: absolute; transform: rotate(270deg); width:295% !important; bottom: 147px ;
         left:-2px;}
@@ -76,8 +77,7 @@
     .bk-border-menu-right h2{left:28px;top:42vh; font-size: 25px}
     .bk-head-logo{width: 150px; left: 15px;top: 2px;}
     .bk-all-header ul{top:27px; right:8px;}
-    .bk-all-header ul li{margin-right: 8px;}
-    .bk-parent-box{height:625px; }
+    .bk-all-header ul li{margin-right: 8px;} 
     .bk-all-img{height:380px; width: 90%;margin-left: 9%;}
     .bk-all-img img{height:380px; width: 90%;}
     /** palefire books **/
