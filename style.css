@@ -5143,10 +5143,20 @@ header{
 .bk-genre-box h5{ color:#a85425; font-size: 42px; text-align: center; margin-top: calc( 25% - 16px ); 
 font-weight:600;letter-spacing: 1px ;text-transform: uppercase; transition: all 500ms;}
 .bk-genre-box:hover{ background-color:rgba(0,0,0,5); width:101%; height:315px;  }
-.bk-genre-box h5:hover{text-shadow: 1px 1px #ddd}
+.bk-genre-box h5:hover{}
 
 
 /** palefire books **/
+
+
+/** woocommerce **/
+.woocommerce{ background: #fff; padding: 30px; }
+.woocommerce table.shop_table{ border:1px solid rgba(255,255,255,0.1); }
+.woocommerce table.cart td.actions .input-text { border-radius: 5px; width: 127px; height: 36px; margin-right: 20px;
+border:1px solid #000; font-size: 18px;padding: 5px; }
+.woocommerce .col2-set .col-1{max-width: 48%;}
+.woocommerce .col2-set .col-2{max-width: 48%;}
+/** woocommerce **/
 
 
 

@@ -28,9 +28,14 @@ function site_setup(){
 
    //Add Custom Title    
    add_theme_support('title-tag');
+
+   //woocommerce
+   add_theme_support('woocommerce');
 }
 
 add_action('after_setup_theme','site_setup');
+
+
 
 //  ======================================= End of theme setup and register========================
 
