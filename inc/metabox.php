@@ -547,3 +547,75 @@ function save_book_mbx($book_id){
 
 }
 //  ===========================post metabox for books=====================
+
+
+
+
+
+//  ===========================delete post metabox for books=====================
+add_action("add_meta_boxes", "book_metaboxes_delete");
+function book_metaboxes_delete(){
+  add_meta_box( 
+        'book-metabox-delete',
+        'Book  Details delete',
+        'book_metabox_fn_delete',
+        'pf_book',
+        'normal',
+        'high'
+    );
+}
+function book_metabox_fn_delete($book){
+  $book_id = $book->ID;
+  $book_price = get_post_meta( $book_id,"book_price",true );
+  $show_book_price = get_post_meta( $book_id,"show_book_price",true );
+
+  $book_original_price = get_post_meta( $book_id,"book_original_price",true );
+  $show_book_original_price = get_post_meta( $book_id,"show_book_original_price",true );
+
+  $book_author = get_post_meta( $book_id,"book_author",true );
+  $show_book_author = get_post_meta( $book_id,"show_book_author",true );
+
+  $book_publisher = get_post_meta( $book_id,"book_publisher",true );
+  $show_book_publisher = get_post_meta( $book_id,"show_book_publisher",true );
+
+  $book_pages = get_post_meta( $book_id,"book_pages",true );
+  $show_book_pages = get_post_meta( $book_id,"show_book_pages",true );
+
+  $book_format = get_post_meta( $book_id,"book_format",true );
+  $show_book_format = get_post_meta( $book_id,"show_book_format",true );
+  ?>
+  <table>
+    
+    <tr>
+      <td><label>Author : </label></td>
+      <td><input type="text" name="book_author" style="border:1px solid #000000" value="<?php echo $book_author; ?>"></td>
+      <td><input type="checkbox" name="show_book_author" style="border:1px solid #000000" value="1" <?php if( $show_book_author == 1 ){ echo 'checked';} ?>></td>
+    </tr>
+    <tr>
+      <td><label>Publisher : </label></td>
+      <td><input type="text" name="book_publisher" style="border:1px solid #000000" value="<?php echo $book_publisher; ?>"></td>
+      <td><input type="checkbox" name="show_book_publisher" style="border:1px solid #000000" value="1" <?php if( $show_book_publisher == 1 ){ echo 'checked';} ?>></td>
+    </tr>
+    <tr>
+      <td><label>Pages : </label></td>
+      <td><input type="text" name="book_pages" style="border:1px solid #000000" value="<?php echo $book_pages; ?>"></td>
+      <td><input type="checkbox" name="show_book_pages" style="border:1px solid #000000" value="1" <?php if( $show_book_pages == 1 ){ echo 'checked';} ?>></td>
+    </tr>
+
+    <tr>
+      <td><label>Format : </label></td>
+      <td>
+        <select name="book_format">
+          <option value="Paperback" <?php if( $book_format == 'Paperback' ){ echo 'selected'; } ?> >Paperback</option>  
+          <option value="Hardcover" <?php if( $book_format == 'Hardcover' ){ echo 'selected'; } ?>  >Hardcover</option>  
+          <option value="Both" <?php if( $book_format == 'Both' ){ echo 'selected'; } ?>  >Both</option>  
+        </select>
+      </td>
+      <td><input type="checkbox" name="show_book_format" style="border:1px solid #000000" value="1" <?php if( $show_book_format == 1 ){ echo 'checked';} ?>></td>
+    </tr>
+
+  </table>
+  <?php
+}
+
+//  =========================== delete post metabox for books=====================

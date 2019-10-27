@@ -163,12 +163,17 @@ while( have_posts() ){
 						
 					</div>
 				</a>
-			<?php } ?>
-				<?php }else{ 
-						 $all_services = new WP_Query(array(
-                           'post_type' => 'pf_services',
-                           'posts_per_page' => 6
+			<?php } 
+				 }
+						 // $all_services = new WP_Query(array(
+       //                     'post_type' => 'pf_services',
+       //                     'posts_per_page' => 6
                            
+       //                   ));
+
+                         $all_services = new WP_Query(array(
+                           'posts_per_page' 	 => 6,
+                           'category_name'       => $categories[0]->cat_name
                          ));
 
 					?>
@@ -176,7 +181,7 @@ while( have_posts() ){
 				<div class="row ">
 					<div class="col-md-12 ml-auto mr-auto">
 						<h4 class="right-head ">
-							<span>Our services</span>
+							<span>Related Posts</span>
 						</h4>
 					</div>	
 				</div>
@@ -202,7 +207,7 @@ while( have_posts() ){
 							<img class="img-fluid" src="<?php echo $servicesImg; ?>">
 						</div>
 						<div class="col-md-8 col-8 ">
-							<p><span class="side-portfolio-title"><?php echo $services_name; ?></span>: <?php  echo wp_trim_words( $services_content, 10 ) ;?> </p>
+							<p class="sg-small"><span class="side-portfolio-title "><?php echo $services_name; ?></span></p>
 						</div>
 						
 					</div>
@@ -210,7 +215,7 @@ while( have_posts() ){
 				<?php
 					}//while loop
 					wp_reset_postdata();
-				 } //else?>
+				 ?>
 				<!-- end else -->
 
 

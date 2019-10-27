@@ -5063,6 +5063,7 @@ header{
 .current{ color:yellow;  }
 .next{}
 .prev{}
+.sg-small{ font-size: 15px; line-height:18px; }
 
 /** palefire books **/
 .bk-parent-container{position: relative; width: 100%; height: 100vh; background:#1D1D1D}
