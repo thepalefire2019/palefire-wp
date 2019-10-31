@@ -78,6 +78,13 @@ $(document).ready(function() {
   } );
 
   $('.bk-menu-mobile').click( function(){
-    $('.bk-all-header-mobile').show();
+    $('.bk-menu-mobile-screen').show("slide",{direcion:"left"},1000);
+     $('.bk-all-body').hide("slide",{direction: "left"}, 1000);
   });
+
+  $('.X').click( function(){
+    $('.bk-menu-mobile-screen').hide("slide",{direcion:"right"},1000);
+    $('.bk-all-body').show("slide",{direction: "left"}, 1000);
+  });
+
 });
