@@ -76,11 +76,21 @@
     .bk-border-menu-left ul{top:32vh; left:-5px;}
     .bk-border-menu-right h2{left:28px;top:42vh; font-size: 25px}
     .bk-head-logo{width: 150px; left: 15px;top: 2px;}
-    .bk-all-header ul{top:27px; right:8px;}
-    .bk-all-header ul li{margin-right: 8px;} 
+    .bk-all-header {display: none;}
     .bk-all-img{height:380px; width: 90%;margin-left: 9%;}
     .bk-all-img img{height:380px; width: 90%;}
     .bk-genre-box h5{ font-size: 32px; margin-top: calc( 36% - 16px ) }
+    .bk-all-header-mobile{ display: block;width:100% ; height:70px; background-color: #1D1D1D; position: relative; }
+    .bk-menu-mobile{position: absolute;right: 20px; width:30px; height:60px; padding-top:2px; }
+    .bk-menu-mobile span{ width:28px; height: 3px; background: #994e24 ; display: block; margin-top: 7px;}
+    .bk-menu-mobile-screen{position: absolute;width:100%; height: 100vh; background: #1D1D1D; z-index: 1000;
+        top:0;}
+    .X{position: absolute;right: 30px;top:20px;}
+    .X p{color: #fff; font-size: 32px;}
+    .bk-menu-mobile-list{margin: 30vh 0 0 35%}
+    .bk-menu-mobile-list ul{ list-style: none; }
+    .bk-menu-mobile-list ul li{  }
+    .bk-menu-mobile-list  a{color:#fff; font-size: 30px;}
     /** palefire books **/
 
 }
