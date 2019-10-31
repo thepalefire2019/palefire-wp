@@ -5,7 +5,7 @@ get_header();
 				       'hierarchical' => 1,
 				       'show_option_none' => '',
 				       'hide_empty' => 0,
-				       'parent' => 16,
+				       'parent' => 73,
 				       'taxonomy' => 'product_cat'
 				    );
 $all_genres = get_categories($args);
@@ -25,7 +25,7 @@ $all_genres = get_categories($args);
 		<ul>
 			<a href="<?php echo site_url(); ?>"><li>Home</li></a>
 			<a href="<?php echo site_url('all-genres'); ?>" ><li style="color:#fff">Genres</li></a>
-			<a href="<?php echo site_url('all-books'); ?>" ><li>All Books</li></a>
+			<a href="<?php echo site_url('shop'); ?>" ><li>All Books</li></a>
 			<a href="https://instagram.com/palefire_books?igshid=1c92cl7ce9gdx"><li>Instagram</li></a>
 		</ul>
 	</div>
@@ -47,7 +47,13 @@ $all_genres = get_categories($args);
 				} 
 				?>
 
-			
+				<div class="col-md-6 col-12 align-self-center">
+					<a href="<?php echo site_url('shop'); ?>">
+						<div class="bk-genre-box">
+							<h5>All Books</h5>
+						</div>
+					</a>
+				</div>
 
 			</div>
 		</div>
