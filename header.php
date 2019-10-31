@@ -40,3 +40,39 @@
   </div> -->
 	  <!--HEADER-->
       
+<?php
+    
+    if( is_page('cart') ){
+      ?>
+      <div class="bk-all-header">
+        <a href="<?php echo site_url('palefire-books'); ?>"><div class="bk-head-logo">
+          <img class="img-fluid" src="<?php echo get_theme_file_uri('img/float.png'); ?>">
+        </div></a>
+        <ul>
+          <a href="<?php echo site_url(); ?>"><li>Home</li></a>
+          <a href="<?php echo site_url('all-genres'); ?>"><li>Genres</li></a>
+          <a href="<?php echo site_url('shop'); ?>" ><li>All Books</li></a>
+          <a href="<?php echo site_url('cart'); ?>" ><li  style="color:#fff" >Cart</li></a>
+          <a href="https://instagram.com/palefire_books?igshid=1c92cl7ce9gdx"><li>Instagram</li></a>
+        </ul>
+      </div>
+
+      <?php
+    }
+    if( is_page('checkout') ){
+      ?>
+      <div class="bk-all-header">
+        <a href="<?php echo site_url('palefire-books'); ?>"><div class="bk-head-logo">
+          <img class="img-fluid" src="<?php echo get_theme_file_uri('img/float.png'); ?>">
+        </div></a>
+        <ul>
+          <a href="<?php echo site_url(); ?>"><li>Home</li></a>
+          <a href="<?php echo site_url('all-genres'); ?>"><li>Genres</li></a>
+          <a href="<?php echo site_url('shop'); ?>" ><li>All Books</li></a>
+          <a href="<?php echo site_url('cart'); ?>" ><li>Cart</li></a>
+          <a href="https://instagram.com/palefire_books?igshid=1c92cl7ce9gdx"><li>Instagram</li></a>
+        </ul>
+      </div>
+      <?php
+    }
+?>

@@ -1,12 +1,18 @@
 <?php
 get_header();
 
-
-
-$all_genres = get_terms([
-    'taxonomy' => 'book_genre',
-    'hide_empty' => false,
-]);
+ $args = array(
+				       'hierarchical' => 1,
+				       'show_option_none' => '',
+				       'hide_empty' => 0,
+				       'parent' => 16,
+				       'taxonomy' => 'product_cat'
+				    );
+$all_genres = get_categories($args);
+// $all_genres = get_terms([
+//     'taxonomy' => 'book_genre',
+//     'hide_empty' => false,
+// ]);
 // foreach( $all_genres as $all_genre ){
 // 	echo $all_genre->slug;
 // 	echo get_term_link( $all_genre );

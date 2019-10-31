@@ -7,7 +7,8 @@ get_header();
 			
 		</div>
 		<div class="bk-discover">
-			<a href="<?php echo site_url('all-genres'); ?>">
+			<!-- <a href="<?php echo site_url('all-genres'); ?>"> -->
+			<a href="#">
 				<h6>Discover</h6>
 				<h5>&darr;</h5>
 			</a>
@@ -15,7 +16,8 @@ get_header();
 		
 		
 		<div class="bk-content-box">
-			<p class="bk-content-para" >Palefire Books is created by <a href="http://thepalefire.com/"><span style="color:#a86a2f"> THEPALEFIRE.COM</span></a>, where our aim is to make rare books affordable. The desire behind Palefire Books is to give access to those rare and beautiful people who still sit by the windows on rainy days, and read. </p>
+			<!-- <p class="bk-content-para" >Palefire Books is created by <a href="http://thepalefire.com/"><span style="color:#a86a2f"> THEPALEFIRE.COM</span></a>, where our aim is to make rare books affordable. The desire behind Palefire Books is to give access to those rare and beautiful people who still sit by the windows on rainy days, and read. </p> -->
+			<p class="bk-content-para">The Website is under Maintenance! To visit our blog goto<a href="http://thepalefire.com/"><span style="color:#a86a2f"> THEPALEFIRE.COM</span></a> </p>
 		</div>
 		<div class="bk-side-bar">
 			<div class="bk-btn-menu">
@@ -40,10 +42,13 @@ get_header();
 					<a href="<?php echo site_url('blog'); ?>"><li>Blog</li></a>
 					<a href="<?php echo site_url('/palefire-software'); ?>"><li>Palefire Software</li></a>
 					<a href="<?php echo site_url('/about-us'); ?>"><li>About Us</li></a>
+					<!-- <a href="<?php echo site_url('/shop'); ?>"><li>All Books</li></a> -->
+					<a href="#"><li>All Books</li></a>
 				</ul>
 			</div>
 			<div class="bk-border-menu-right">
-				<a href="<?php  echo site_url('all-genres');  ?>"><h2> Continue to palefire books </h2></a>
+				<!-- <a href="<?php  echo site_url('all-genres');  ?>"><h2> Continue to palefire books </h2></a> -->
+				<a href="#"><h2> Continue to palefire books </h2></a>
 			</div>
 		</div>
 	</div>

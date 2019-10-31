@@ -8,7 +8,8 @@
 		<ul>
 			<a href="<?php echo site_url(); ?>"><li>Home</li></a>
 			<a href="<?php echo site_url('all-genres'); ?>"><li>Genres</li></a>
-			<a href="<?php echo site_url('all-books'); ?>" ><li style="color:#fff">All Books</li></a>
+			<a href="<?php echo site_url('shop'); ?>" ><li style="color:#fff">All Books</li></a>
+			<a href="<?php echo site_url('cart'); ?>" ><li >Cart</li></a>
 			<a href="https://instagram.com/palefire_books?igshid=1c92cl7ce9gdx"><li>Instagram</li></a>
 		</ul>
 	</div>
@@ -18,12 +19,12 @@
 			<?php 
 				$ourCurrentPage = get_query_var('paged');
 
-				$all_books = new WP_Query(array(
-                           'post_type' => 'pf_book',
-                           'posts_per_page' => 12,
-                           'paged' => $ourCurrentPage 
+				// $all_books = new WP_Query(array(
+    //                        'post_type' => 'product',
+    //                        'posts_per_page' => 12,
+    //                        'paged' => $ourCurrentPage 
                            
-                         ));
+    //                      ));
 				while( have_posts() ){
 					the_post();
 
