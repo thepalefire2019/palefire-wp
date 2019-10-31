@@ -66,3 +66,14 @@ $(document).ready(function() {
 //palefire books menu
 
 
+$(document).ready(function() {
+  $('#product-search').click( function(){
+    $('.bk-search').show("slide",{direction: "left"}, 1000);
+    $('.bk-all-body').hide("slide",{direction: "left"}, 1000);
+
+  } );
+  $('#close-search').click( function(){
+    $('.bk-search').hide("slide",{direcion:"right"},1000);
+    $('.bk-all-body').show("slide",{direction: "left"}, 1000);
+  } );
+});

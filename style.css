@@ -5144,8 +5144,18 @@ header{
 .bk-genre-box h5{ color:#a85425; font-size: 42px; text-align: center; margin-top: calc( 25% - 16px ); 
 font-weight:600;letter-spacing: 1px ;text-transform: uppercase; transition: all 500ms;}
 .bk-genre-box:hover{ background-color:rgba(0,0,0,5); width:101%; height:315px;  }
-.bk-genre-box h5:hover{}
 
+.bk-search{position: absolute; z-index: 1000;left: 0; width:100%;height: 100vh;background: #1D1D1D;}
+.bk-search-box{ padding:35vh 0 0 17%; }
+.bk-search [type=submit]{ margin:0 0 0 20px;width:110px; height:48px; color: #fff; background: transparent; 
+border:2px solid #994e24; font-size: 20px; font-weight: bold; border-radius: 20px; cursor: pointer; }
+.bk-search [type=submit]:hover{background:#994e24; color: #1D1D1D; }
+.bk-search [type=search]{border: none;background: transparent; border-bottom:4px solid #fff; width:70%; color: #fff;
+padding: 0 0 0 50px;font-size:32px; font-weight: bold; }
+.bk-search-close{ margin: 30px 0 0 45%; }
+.bk-search-close span{ color:#fff; font-size: 14px; border:1px solid #fff; padding: 8px 10px;border-radius: 10px; 
+cursor: pointer;}
+.bk-search-close span:hover{ background: #fff; color:#994e24  }
 
 /** palefire books **/
 
