@@ -81,7 +81,7 @@
     .bk-all-img img{height:380px; width: 90%;}
     .bk-genre-box h5{ font-size: 32px; margin-top: calc( 36% - 16px ) }
     .bk-all-header-mobile{ display: block;width:100% ; height:70px; background-color: #1D1D1D; position: relative; }
-    .bk-menu-mobile{position: absolute;right: 20px; width:30px; height:60px; padding-top:2px; }
+    .bk-menu-mobile{position: absolute;right: 20px; width:30px; height:60px;top:19px; }
     .bk-menu-mobile span{ width:28px; height: 3px; background: #994e24 ; display: block; margin-top: 7px;}
     .bk-menu-mobile-screen{position: absolute;width:100%; height: 100vh; background: #1D1D1D; z-index: 1000;
         top:0;}
@@ -91,6 +91,13 @@
     .bk-menu-mobile-list ul{ list-style: none; }
     .bk-menu-mobile-list ul li{  }
     .bk-menu-mobile-list  a{color:#fff; font-size: 30px;}
+    .product-search{ position: absolute; right:21%; top:27px;}
+    .product-search img{ height:20px; }
+    .bk-search-close {margin:65px 0 0 35%}
+    .bk-search-box {padding: 27vh 0 0 19%;}
+    .bk-search [type=search] {border-bottom: 2px solid #fff;width: 51%;padding: 0 0 0 15px;font-size: 17px;}
+    .bk-search [type=submit] {margin: 0px 0 0 16px;width: 88px;height: 35px;font-size: 16px;border-radius: 20px;
+    cursor: pointer;}
     /** palefire books **/
 
 }

@@ -11,7 +11,7 @@
 			<a href="<?php echo site_url('shop'); ?>" ><li style="color:#fff">Books</li></a>
 			<a href="<?php echo site_url('cart'); ?>" ><li >Cart</li></a>
 			<a href="https://instagram.com/palefire_books?igshid=1c92cl7ce9gdx"><li>Instagram</li></a>
-			<li id="product-search" style="cursor: pointer;">Search</li>
+			<li id="product-search" style="cursor: pointer;"><img src="<?php echo get_theme_file_uri('img/svg/search.svg'); ?>"></li>
 		</ul>
 	</div>
 	<div class="bk-search" style="display: none">
@@ -27,7 +27,7 @@
 		<a href="<?php echo site_url('palefire-books'); ?>"><div class="bk-head-logo">
 			<img class="img-fluid" src="<?php echo get_theme_file_uri('img/float.png'); ?>">
 		</div></a>
-		<div id="product-search"><span>Search</span></div>
+		<div id="product-search-mobile" class="product-search"><img src="<?php echo get_theme_file_uri('img/svg/search.svg'); ?>"></div>
 		<div class="bk-menu-mobile">
 			<span></span>
 			<span></span>
@@ -42,7 +42,7 @@
 			<ul>
 				<a href="<?php echo site_url(); ?>"><li>Home</li></a>
 				<a href="<?php echo site_url('all-genres'); ?>"><li>Genres</li></a>
-				<a href="<?php echo site_url('shop'); ?>" ><li style="color:#fff">Books</li></a>
+				<a href="<?php echo site_url('shop'); ?>" ><li style="color:#994e24 ">Books</li></a>
 				<a href="<?php echo site_url('cart'); ?>" ><li >Cart</li></a>
 				<a href="https://instagram.com/palefire_books?igshid=1c92cl7ce9gdx"><li>Instagram</li></a>
 			</ul>

@@ -87,4 +87,10 @@ $(document).ready(function() {
     $('.bk-all-body').show("slide",{direction: "left"}, 1000);
   });
 
+  $('#product-search-mobile').click( function(){
+    $('.bk-search').show("slide",{direction: "left"}, 1000);
+    $('.bk-all-body').hide("slide",{direction: "left"}, 1000);
+
+  } );
+
 });
