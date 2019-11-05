@@ -17,7 +17,7 @@
 
       <div class="row ft-para">
         <div class="col-md-12 col-12">
-          <p>The Platform is for any enthusiastic bloggres. The website presents the community of people who enjoy reading and writing. Happy Blogging </p>
+          <p>The Platform is for any enthusiastic bloggers. The website presents the community of people who enjoy reading and writing. Happy Blogging </p>
         </div>
       </div>
       <div class="row">
